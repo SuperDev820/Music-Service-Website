@@ -1,6 +1,7 @@
 import mutations from './mutation'
 import actions from './action'
 import getters from './getter'
+import JwtService from "@/common/jwt.service"
 
 const defaultState = {
   token: null,
@@ -9,7 +10,7 @@ const defaultState = {
       register: []
   },
   userId: null,
-  isAuthenticated: false,
+  isAuthenticated: JwtService.getToken()? true : false,
 };
 
 export default {

@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 // https://github.com/declandewet/vue-meta
 import VueMeta from 'vue-meta'
 
-import store from '../state/store'
+import store from '../store'
 import routes from './routes'
 
 Vue.use(VueRouter)
@@ -57,7 +57,7 @@ router.beforeEach((routeTo, routeFrom, next) => {
   // eslint-disable-next-line no-unused-vars
   function redirectToLogin() {  
     // Pass the original route to the login component
-    next({ name: 'login', query: { redirectFrom: routeTo.fullPath } })
+    next({ name: 'login'})
   }
 })
 

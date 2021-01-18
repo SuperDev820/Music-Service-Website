@@ -25,5 +25,14 @@ const mutations = {
   [type.AUTH_LOGOUT] (state, payload) {
       JwtService.unsetToken();
   },
+  [type.AUTH_RESET_STATE] (state, payload) {
+    state.isAuthenticated = false;
+    state.userId = null;
+    state.token = null;
+    state.errors = {
+        login: [],
+        register: []
+    };
+},
 };
 export default mutations;

@@ -1,9 +1,9 @@
-// import store from '../state/store'
+import store from '../store'
 
 export default [
     {
         path: '/',
-        // meta: { authRequired: true },
+        meta: { authRequired: true },
         name: 'home',
         component: () => import('../contains/dashboard/home'),
     },
@@ -12,16 +12,16 @@ export default [
         name: 'login',
         component: () => import('../contains/auth/login'),
         meta: {
-            // beforeResolve(routeTo, routeFrom, next) {
-            //     // If the user is already logged in
-            //     if (store.getters['isAuthenticated']) {
-            //         // Redirect to the home page instead
-            //         next({ name: 'home' })
-            //     } else {
-            //         // Continue to the login page
-            //         next()
-            //     }
-            // },
+            beforeResolve(routeTo, routeFrom, next) {
+                // If the user is already logged in
+                if (store.getters['isAuthenticated']) {
+                    // Redirect to the home page instead
+                    next({ name: 'home' })
+                } else {
+                    // Continue to the login page
+                    next()
+                }
+            },
         },
     },
     {
@@ -29,16 +29,16 @@ export default [
         name: 'register',
         component: () => import('../contains/auth/register'),
         meta: {
-            // beforeResolve(routeTo, routeFrom, next) {
-            //     // If the user is already logged in
-            //     if (store.getters['auth/loggedIn']) {
-            //         // Redirect to the home page instead
-            //         next({ name: 'home' })
-            //     } else {
-            //         // Continue to the login page
-            //         next()
-            //     }
-            // },
+            beforeResolve(routeTo, routeFrom, next) {
+                // If the user is already logged in
+                if (store.getters['isAuthenticated']) {
+                    // Redirect to the home page instead
+                    next({ name: 'home' })
+                } else {
+                    // Continue to the login page
+                    next()
+                }
+            },
         },
     },
     {
@@ -46,16 +46,16 @@ export default [
         name: 'forgot-password',
         component: () => import('../contains/auth/forgot-password'),
         meta: {
-            // beforeResolve(routeTo, routeFrom, next) {
-            //     // If the user is already logged in
-            //     if (store.getters['auth/loggedIn']) {
-            //         // Redirect to the home page instead
-            //         next({ name: 'home' })
-            //     } else {
-            //         // Continue to the login page
-            //         next()
-            //     }
-            // },
+            beforeResolve(routeTo, routeFrom, next) {
+                // If the user is already logged in
+                if (store.getters['isAuthenticated']) {
+                    // Redirect to the home page instead
+                    next({ name: 'home' })
+                } else {
+                    // Continue to the login page
+                    next()
+                }
+            },
         },  
     },
     {
@@ -63,14 +63,14 @@ export default [
         name: 'logout',
         meta: {
             authRequired: true,
-            // beforeResolve(routeTo, routeFrom, next) {
-            //     store.dispatch('auth/logOut')
-            //     const authRequiredOnPreviousRoute = routeFrom.matched.some(
-            //         (route) => route.push('/login')
-            //     )
-            //     // Navigate back to previous page, or home as a fallback
-            //     next(authRequiredOnPreviousRoute ? { name: 'home' } : { ...routeFrom })
-            // },
+            beforeResolve(routeTo, routeFrom, next) {
+                store.dispatch('logout')
+                const authRequiredOnPreviousRoute = routeFrom.matched.some(
+                    (route) => route.push('/login')
+                )
+                // Navigate back to previous page, or home as a fallback
+                next(authRequiredOnPreviousRoute ? { name: 'home' } : { ...routeFrom })
+            },
         },
     },
     // {
