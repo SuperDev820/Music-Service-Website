@@ -32,10 +32,10 @@ Route::group([ 'prefix' => 'v1', 'middleware' => 'api'], function(){
     Route::group(['middleware' => ['jwt.auth']], function() {
 
         /* User logout from system */
-        Route::post('user/logout', 'Api\v1\AuthController@logout');
+        Route::post('user/logout', 'App\Http\Controllers\Api\v1\AuthController@logout');
 
         // Get auth user
-        Route::get('token/validate', 'Api\v1\AuthController@auth');
+        Route::get('token/validate', 'App\Http\Controllers\Api\v1\AuthController@auth');
 
         // /* Show all teams */
         // Route::get('teams', 'Api\v1\TeamController@index');
