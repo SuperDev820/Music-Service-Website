@@ -2,68 +2,32 @@
 import Layout from "../layouts/main";
 import appConfig from "@/app.config";
 
-import Stat from "@/components/widgets/widget-stat";
-
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
-import { sparklineChartData, salesDonutChart, radialBarChart } from "./data";
+import {  } from "./data";
 
 export default {
   page: {
-    title: "Dashboard",
+    title: "Homepage",
     meta: [{ name: "description", content: appConfig.description }]
   },
   components: {
     Layout,
-    Stat,
     VueSlickCarousel
   },
   data() {
     return {
-      sparklineChartData: sparklineChartData,
-      salesDonutChart: salesDonutChart,
-      radialBarChart: radialBarChart,
       settings: {
         "focusOnSelect": true,
         "infinite": true,
         "speed": 500,
         "slidesToShow": 4,
         "slidesToScroll": 4,
-        "touchThreshold": 5
-      },
-      statData: [
-        {
-          title: "Orders",
-          image: require("@/assets/images/services-icon/01.png"),
-          value: "1,685",
-          subText: "+ 12%",
-          color: "success"
-        },
-        {
-          title: "Revenue",
-          image: require("@/assets/images/services-icon/02.png"),
-          value: "52,368",
-          subText: "- 28%",
-          color: "danger"
-        },
-        {
-          title: "Average Price",
-          image: require("@/assets/images/services-icon/03.png"),
-          value: "15.8",
-          subText: "00%",
-          color: "info"
-        },
-        {
-          title: "Product Sold",
-          image: require("@/assets/images/services-icon/04.png"),
-          value: "2436",
-          subText: "+ 84%",
-          color: "warning"
-        }
-      ],
+        "touchThreshold": 4
+      }
     };
   }
 };
