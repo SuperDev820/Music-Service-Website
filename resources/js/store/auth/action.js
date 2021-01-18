@@ -44,7 +44,6 @@ const actions = {
         return new Promise((resolve, reject) => {
             ApiService.post("api/v1/user/register", credentials)
                 .then((data) => {
-                    console.log(data);
                     context.commit(type.AUTH_SET_USER, {userId: data.user_id, token: data.token});
                     resolve(data);
                 })
@@ -66,11 +65,9 @@ const actions = {
             return new Promise((resolve) =>{
                 ApiService.get("api/v1/token/validate")
                     .then((data) => {
-                        console.log(data)
                         resolve(data)
                     })
                     .catch(({ response }) => {
-                        console.log("catch");
                         context.commit(type.AUTH_LOGOUT);
                     });
 
