@@ -6,6 +6,7 @@ const JwtService = {
     },
     
     setToken(token) {
+    	console.log("jwt service")
         window.localStorage.setItem(ID_API_TOKEN, token);
     },
     

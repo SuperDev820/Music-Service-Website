@@ -8,6 +8,7 @@ const actions = {
             ApiService.post("api/v1/user/login", credentials)
                 .then(({data}) => {
                     context.commit(type.AUTH_CLEAR_ERRORS);
+                    console.log(data);
                     context.commit(
                         type.AUTH_SET_USER, {userId: data.user.id, token: data.access_token}
                     );
