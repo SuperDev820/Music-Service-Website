@@ -20,6 +20,7 @@ const mutations = {
           login: [],
           register: []
       };
+      console.log(data.token);
       JwtService.setToken(data.token);
   },
   [type.AUTH_LOGOUT] (state, payload) {

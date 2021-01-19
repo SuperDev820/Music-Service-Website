@@ -3,7 +3,7 @@ import store from '../store'
 export default [
     {
         path: '/',
-        meta: { authRequired: true },
+        // meta: { authRequired: true },
         name: 'home',
         component: () => import('../contains/dashboard/home'),
     },
