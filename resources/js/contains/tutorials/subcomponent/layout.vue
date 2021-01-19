@@ -2,6 +2,7 @@
     import router from "@/router";
     
     import Topbar from "@/components/topbar";
+    import Subnav from "@/components/sub-nav";
     import Sidebar from "./sidebar";
     import Footer from "@/components/footer";
     import RightBar from "@/components/right-bar";
@@ -10,6 +11,7 @@
       components: {
         Topbar,
         Sidebar,
+        Subnav,
         Footer,
         RightBar
       },
@@ -46,6 +48,7 @@
       <div id="layout-wrapper">
         <Topbar />
         <Sidebar />
+        <Subnav />
         <div class="main-content">
           <div class="page-content">
             <div class="container-fluid">

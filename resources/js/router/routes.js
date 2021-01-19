@@ -78,7 +78,7 @@ export default [
         name: 'TutorialDashboard',
         component: () => import('../contains/tutorials/dashboard'),
         meta: {
-            authRequired: true,
+            // authRequired: true,
         },
     },
     {
@@ -86,7 +86,7 @@ export default [
         name: 'TutorialAllCourses',
         component: () => import('../contains/tutorials/allcourses'),
         meta: {
-            authRequired: true,
+            // authRequired: true,
         },
     },
     {
@@ -94,7 +94,7 @@ export default [
         name: 'TutorialCourse',
         component: () => import('../contains/tutorials/course'),
         meta: {
-            authRequired: true,
+            // authRequired: true,
         },
     },
 ]

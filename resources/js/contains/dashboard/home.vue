@@ -1,6 +1,7 @@
 <script>
 import Layout from "../layouts/main";
 import appConfig from "@/app.config";
+import CourseItem from '@/components/course-item';
 
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
@@ -16,10 +17,12 @@ export default {
   },
   components: {
     Layout,
-    VueSlickCarousel
+    VueSlickCarousel,
+    CourseItem
   },
   data() {
     return {
+      courses : [1, 2, 3, 4, 5, 6],
       settings: {
         "focusOnSelect": true,
         "infinite": true,
@@ -60,65 +63,14 @@ export default {
       <h1 class="black">What's New</h1>
       <p class="black">Latest Courses, Sounds, News and Features</p>
       <VueSlickCarousel v-bind="settings">
-        <div>
-          <b-img :src="require('@/assets/images/users/avatar-5.jpg')" fluid alt="Responsive image"></b-img>
-          <div style="padding: 0 10px;">
-            <blockquote class="blockquote">
-              <p class="m-0">HOW TO USE</p>
-              <i class="fas fa-plus-circle"></i>
-            </blockquote>
-            <h5 class="black px-3">Novigation AFX Station Review with King Unique</h5>
-          </div>
-        </div>
-        <div>
-          <b-img :src="require('@/assets/images/users/avatar-6.jpg')" fluid alt="Responsive image"></b-img>
-          <div style="padding: 0 10px;">
-            <blockquote class="blockquote">
-              <p class="m-0">MIXING & MASTERING</p>
-              <i class="fas fa-plus-circle"></i>
-            </blockquote>
-            <h5 class="black px-3">How To Mix using Universal Audio Luna with Kirk Degiorgio</h5>
-          </div>
-        </div>
-        <div>
-          <b-img :src="require('@/assets/images/users/avatar-7.jpg')" fluid alt="Responsive image"></b-img>
-          <div style="padding: 0 10px;">
-            <blockquote class="blockquote">
-              <p class="m-0">HOW TO USE</p>
-              <i class="fas fa-plus-circle"></i>
-            </blockquote>
-            <h5 class="black px-3">Albeton Live Vocoder with P-LASK</h5>
-          </div>
-        </div>
-        <div>
-          <b-img :src="require('@/assets/images/users/avatar-8.jpg')" fluid alt="Responsive image"></b-img>
-          <div style="padding: 0 10px;">
-            <blockquote class="blockquote">
-              <p class="m-0">HOW TO USE</p>
-              <i class="fas fa-plus-circle"></i>
-            </blockquote>
-            <h5 class="black px-3">Albeton Live Beat Repeat with P-LASK</h5>
-          </div>
-        </div>
-        <div>
-          <b-img :src="require('@/assets/images/users/avatar-4.jpg')" fluid alt="Responsive image"></b-img>
-          <div style="padding: 0 10px;">
-            <blockquote class="blockquote">
-              <p class="m-0">AudioTri Features</p>
-              <i class="fas fa-plus-circle"></i>
-            </blockquote>
-            <h5 class="black px-3">Top 5 Plugins of 2020 with Protoculture</h5>
-          </div>
-        </div>
-        <div>
-          <b-img :src="require('@/assets/images/users/avatar-3.jpg')" fluid alt="Responsive image"></b-img>
-          <div style="padding: 0 10px;">
-            <blockquote class="blockquote">
-              <p class="m-0">HOW TO USE</p>
-              <i class="fas fa-plus-circle"></i>
-            </blockquote>
-            <h5 class="black px-3">Novigation AFX Station Review with King Unique</h5>
-          </div>
+        <div class="px-2" v-for="(number, index) in courses" :key="index">
+          <CourseItem 
+            image="/upload/image/1.png"
+            category="HOW TO USE"
+            title="Novation AFX Station Review With King Unique"
+            link="novation-afx-station-review-with-king-unique"
+          >
+          </CourseItem>
         </div>
       </VueSlickCarousel>
     </div>
@@ -235,3 +187,8 @@ export default {
     </div>
   </Layout>
 </template>
+<style>
+  .course-div .title {
+    color: black;
+  }
+</style>

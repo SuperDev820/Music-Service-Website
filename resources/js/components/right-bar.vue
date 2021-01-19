@@ -38,39 +38,44 @@ export default {
           <a href="javascript:void(0);" class="right-bar-toggle float-right" @click="hide">
             <i class="mdi mdi-close noti-icon"></i>
           </a>
-          <h5 class="m-0">Settings</h5>
+          <h1 class="m-0">Search</h1>
         </div>
 
         <!-- Settings -->
-        <hr class="mt-0" />
-        <h6 class="text-center">Choose Layouts</h6>
-
-        <div class="p-4">
-          <div class="mb-2">
-            <router-link tag="a" target="_blank" to="//veltrix.vuejs-light.themesbrand.com/">
-              <img src="@/assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt />
-            </router-link>
+        <form class="app-search w-75" style="margin: 0 auto;">
+          <div class="position-relative">
+            <span class="fa fa-search"></span>
+            <input type="text" class="form-control" placeholder="Search..." />
           </div>
+        </form>
 
-          <div class="mb-2">
-            <router-link tag="a" target="_blank" to="//veltrix.vuejs-dark.themesbrand.com/">
-              <img src="@/assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt />
-            </router-link>
+        <div class="p-4 row">
+          <div class="col-lg-6 col-md-12">
+            <h5 class="pb-2">Products</h5>
+            <ul class="pl-0">
+              <li class="d-flex align-items-center">
+                <img :src="require('@/assets/images/product/img-1.png')" />
+                <p class="mb-0">Product 1</p>
+              </li>
+              <li class="d-flex align-items-center">
+                <img :src="require('@/assets/images/product/img-2.png')" />
+                <p class="mb-0">Product 2</p>
+              </li>
+            </ul>
           </div>
-
-          <div class="mb-2">
-            <router-link tag="a" target="_blank" to="//veltrix.vuejs-rtl.themesbrand.com/">
-              <img src="@/assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt />
-            </router-link>
+          <div class="col-lg-6 col-md-12">
+            <h5 class="pb-2">Tutorials</h5>
+            <ul class="pl-0">
+              <li class="d-flex align-items-center">
+                <img :src="require('@/assets/images/small/img-1.jpg')" />
+                <p class="mb-0">TUTORIAL DESCRIPTION</p>
+              </li>
+              <li class="d-flex align-items-center">
+                <img :src="require('@/assets/images/small/img-2.jpg')" />
+                <p class="mb-0">TUTORIAL DESCRIPTION</p>
+              </li>
+            </ul>
           </div>
-
-          <a
-            href="https://1.envato.market/grNDB"
-            class="btn btn-primary btn-block mt-3"
-            target="_blank"
-          >
-            <i class="mdi mdi-cart mr-1"></i> Purchase Now
-          </a>
         </div>
       </div>
       <!-- end scroll-->
@@ -81,4 +86,16 @@ export default {
   </div>
 </template>
 
-<style lang="scss"></style>
+<style>
+  .right-bar ul {
+    overflow: hidden scroll;
+  }
+  .right-bar ul li {
+    border-top: 1px solid grey;
+    padding: 10px;
+  }
+  .right-bar ul li img {
+    width: 70px;
+    height: 70px;
+  }
+</style>

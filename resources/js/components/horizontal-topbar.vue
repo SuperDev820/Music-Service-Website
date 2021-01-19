@@ -34,9 +34,6 @@ export default {
     toggleMenu() {
       let element = document.getElementById("topnav-menu-content");
       element.classList.toggle("show");
-    },
-    toggleRightSidebar() {
-      this.$parent.toggleRightSidebar();
     }
   }
 };
@@ -50,19 +47,19 @@ export default {
         <div class="navbar-brand-box">
           <a href="/" class="logo logo-dark">
             <span class="logo-sm">
-              <img src="@/assets/images/logo-sm.png" alt height="22" />
+              <img src="@/assets/images/logo-sm.png" alt height="30" />
             </span>
             <span class="logo-lg">
-              <img src="@/assets/images/logo-dark.png" alt height="17" />
+              <img src="@/assets/images/logo-dark.png" alt height="45" width="130" style="border-radius: 3px;" />
             </span>
           </a>
 
           <a href="/" class="logo logo-light">
             <span class="logo-sm">
-              <img src="@/assets/images/logo-sm.png" alt height="22" />
+              <img src="@/assets/images/logo-sm.png" alt height="30" />
             </span>
             <span class="logo-lg">
-              <img src="@/assets/images/logo-light.png" alt height="18" />
+              <img src="@/assets/images/logo-light.png" alt height="45" width="130" style="border-radius: 3px;" />
             </span>
           </a>
         </div>
@@ -78,14 +75,14 @@ export default {
 
       <div class="d-flex">
         <!-- App Search-->
-        <form class="app-search d-none d-lg-block">
+        <!-- <form class="app-search d-none d-lg-block">
           <div class="position-relative">
             <input type="text" class="form-control" placeholder="Search..." />
             <span class="fa fa-search"></span>
           </div>
-        </form>
+        </form> -->
 
-        <b-dropdown class="d-none d-md-block ml-2" toggle-class="header-item" right variant="white">
+        <!-- <b-dropdown class="d-none d-md-block ml-2" toggle-class="header-item" right variant="white">
           <template v-slot:button-content>
             <img
               class="mr-2"
@@ -103,10 +100,10 @@ export default {
               height="12"
             />
             <span class="align-middle">German</span>
-          </a>
+          </a> -->
 
           <!-- item-->
-          <a href="javascript:void(0);" class="dropdown-item notify-item">
+          <!-- <a href="javascript:void(0);" class="dropdown-item notify-item">
             <img
               src="@/assets/images/flags/italy_flag.jpg"
               alt="user-image"
@@ -114,10 +111,10 @@ export default {
               height="12"
             />
             <span class="align-middle">Italian</span>
-          </a>
+          </a> -->
 
           <!-- item-->
-          <a href="javascript:void(0);" class="dropdown-item notify-item">
+          <!-- <a href="javascript:void(0);" class="dropdown-item notify-item">
             <img
               src="@/assets/images/flags/french_flag.jpg"
               alt="user-image"
@@ -125,10 +122,10 @@ export default {
               height="12"
             />
             <span class="align-middle">French</span>
-          </a>
+          </a> -->
 
           <!-- item-->
-          <a href="javascript:void(0);" class="dropdown-item notify-item">
+          <!-- <a href="javascript:void(0);" class="dropdown-item notify-item">
             <img
               src="@/assets/images/flags/spain_flag.jpg"
               alt="user-image"
@@ -136,10 +133,10 @@ export default {
               height="12"
             />
             <span class="align-middle">Spanish</span>
-          </a>
+          </a> -->
 
           <!-- item-->
-          <a href="javascript:void(0);" class="dropdown-item notify-item">
+          <!-- <a href="javascript:void(0);" class="dropdown-item notify-item">
             <img
               src="@/assets/images/flags/russia_flag.jpg"
               alt="user-image"
@@ -147,8 +144,8 @@ export default {
               height="12"
             />
             <span class="align-middle">Russian</span>
-          </a>
-        </b-dropdown>
+          </a> -->
+        <!-- </b-dropdown> -->
 
         <div class="dropdown d-none d-lg-inline-block">
           <button type="button" class="btn header-item noti-icon" @click="initFullScreen">
@@ -156,7 +153,7 @@ export default {
           </button>
         </div>
 
-        <b-dropdown
+        <!-- <b-dropdown
           class="d-inline-block"
           toggle-class="header-item noti-icon"
           menu-class="dropdown-menu-lg p-0"
@@ -255,7 +252,15 @@ export default {
               </div>
             </a>
           </div>
-        </b-dropdown>
+        </b-dropdown> -->
+
+        <a
+          href="/"
+          class="btn btn-info btn-block my-3 d-inline-block"
+          target="_blank"
+        >
+          Your Basket <i class="mdi mdi-cart mr-1"></i> £0.00
+        </a>
 
         <b-dropdown class="d-inline-block" right toggle-class="header-item" variant="white">
           <template v-slot:button-content>
@@ -271,20 +276,20 @@ export default {
           <a class="dropdown-item" href="#">
             <i class="mdi mdi-wallet font-size-17 align-middle mr-1"></i> My Wallet
           </a>
-          <a class="dropdown-item d-block" href="#">
+          <!-- <a class="dropdown-item d-block" href="#">
             <span class="badge badge-success float-right">11</span>
             <i class="mdi mdi-settings font-size-17 align-middle mr-1"></i> Settings
           </a>
           <a class="dropdown-item" href="#">
             <i class="mdi mdi-lock-open-outline font-size-17 align-middle mr-1"></i> Lock screen
-          </a>
+          </a> -->
           <div class="dropdown-divider"></div>
           <a class="dropdown-item text-danger" href="#">
             <i class="bx bx-power-off font-size-17 align-middle mr-1 text-danger"></i> Logout
           </a>
         </b-dropdown>
 
-        <div class="dropdown d-inline-block">
+        <!-- <div class="dropdown d-inline-block">
           <button
             type="button"
             class="btn header-item noti-icon right-bar-toggle toggle-right"
@@ -292,7 +297,7 @@ export default {
           >
             <i class="mdi mdi-settings-outline toggle-right"></i>
           </button>
-        </div>
+        </div> -->
       </div>
     </div>
   </header>
