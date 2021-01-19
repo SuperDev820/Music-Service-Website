@@ -44,7 +44,7 @@ const actions = {
         return new Promise((resolve, reject) => {
             ApiService.post("api/v1/user/register", credentials)
                 .then((data) => {
-                    context.commit(type.AUTH_SET_USER, {userId: data.user_id, token: data.token});
+                    // context.commit(type.AUTH_SET_USER, {userId: data.user_id, token: data.access_token});
                     resolve(data);
                 })
                 .catch(({response, status}) => {

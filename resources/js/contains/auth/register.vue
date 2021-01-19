@@ -38,12 +38,19 @@ export default {
               password_confirmation: this.password
           })
           .then((res, status) => {
-            console.log("then");
-            console.log(res);
+            this.tryingToRegister = false;
+            this.isRegisterError = false;
+            this.registerSuccess = true;
+            if (this.registerSuccess) {
+              this.$router.push(
+                { name: "login" }
+              );
+            }
           })
           .catch((error) => {
-            console.log("catch");
-            console.log(error);
+            this.tryingToRegister = false;
+            this.regError = error ? error : "";
+            this.isRegisterError = true;
           })
         // this.register({
         //   email: this.email,

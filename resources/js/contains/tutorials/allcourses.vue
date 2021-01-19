@@ -34,7 +34,7 @@ export default {
 <template>
   <Layout>
     <div class="row">
-      <div class="col-lg-3" v-for="(number, index) in courses" :key="index">
+      <div class="col-lg-3 col-md-4 col-sm-6" v-for="(number, index) in courses" :key="index">
         <CourseItem 
           image="/upload/image/1.png"
         >

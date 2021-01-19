@@ -47,6 +47,8 @@ __webpack_require__.r(__webpack_exports__);
     // Try to register the user in with the email, username
     // and password they provided.
     tryToRegisterIn: function tryToRegisterIn() {
+      var _this = this;
+
       this.tryingToRegister = true; // Reset the regError if it existed.
 
       this.regError = null;
@@ -56,11 +58,19 @@ __webpack_require__.r(__webpack_exports__);
         password: this.password,
         password_confirmation: this.password
       }).then(function (res, status) {
-        console.log("then");
-        console.log(res);
+        _this.tryingToRegister = false;
+        _this.isRegisterError = false;
+        _this.registerSuccess = true;
+
+        if (_this.registerSuccess) {
+          _this.$router.push({
+            name: "login"
+          });
+        }
       })["catch"](function (error) {
-        console.log("catch");
-        console.log(error);
+        _this.tryingToRegister = false;
+        _this.regError = error ? error : "";
+        _this.isRegisterError = true;
       }) // this.register({
       //   email: this.email,
       //   password: this.password

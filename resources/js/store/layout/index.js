@@ -3,7 +3,7 @@ import actions from './action'
 import getters from './getter'
 
 const defaultState = {
-    layoutType: 'vertical',
+    layoutType: 'horizontal',
 };
 
 export default {

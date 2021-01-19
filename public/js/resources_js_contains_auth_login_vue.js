@@ -65,25 +65,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.tryingToLogIn = false;
         _this.authError = error ? error : "";
         _this.isAuthError = true;
-      }) // this.logIn({
-      //   email: this.email,
-      //   password: this.password
-      // })
-      //   // eslint-disable-next-line no-unused-vars
-      //   .then(token => {
-      //     this.tryingToLogIn = false;
-      //     this.isAuthError = false;
-      //     // Redirect to the originally requested page, or to the home page
-      //     this.$router.push(
-      //       this.$route.query.redirectFrom || { name: "home" }
-      //     );
-      //   })
-      //   .catch(error => {
-      //     this.tryingToLogIn = false;
-      //     this.authError = error ? error : "";
-      //     this.isAuthError = true;
-      //   })
-      ;
+      });
     }
   })
 });

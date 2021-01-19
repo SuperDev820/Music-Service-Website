@@ -33,7 +33,7 @@ export default {
     <div class="card-body">
       <div class="mb-4">
         <div class="float-left mini-stat-img mr-4">
-          <img :src="`${image}`" alt />
+          <img :src="`${image}`" alt="" />
         </div>
         <h5 class="font-size-16 text-uppercase mt-0 text-white-50">{{title}}</h5>
         <h4 class="font-weight-medium font-size-24">
