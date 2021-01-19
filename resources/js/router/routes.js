@@ -89,4 +89,12 @@ export default [
             authRequired: true,
         },
     },
+    {
+        path: '/tutorials/:title',
+        name: 'TutorialCourse',
+        component: () => import('../contains/tutorials/course'),
+        meta: {
+            authRequired: true,
+        },
+    },
 ]

@@ -2,11 +2,11 @@
 import Layout from "./subcomponent/layout";
 import appConfig from "@/app.config";
 
-import Chart from "@/components/widgets/chart";
-import Stat from "@/components/widgets/widget-stat";
-import Transaction from "@/components/widgets/transaction";
-import Chat from "@/components/widgets/chat";
-import Activity from "@/components/widgets/activity";
+// import Chart from "@/components/widgets/chart";
+// import Stat from "@/components/widgets/widget-stat";
+// import Transaction from "@/components/widgets/transaction";
+// import Chat from "@/components/widgets/chat";
+// import Activity from "@/components/widgets/activity";
 import CourseItem from '@/components/course-item';
 
 export default {
@@ -16,11 +16,6 @@ export default {
   },
   components: {
     Layout,
-    Chart,
-    Stat,
-    Transaction,
-    Chat,
-    Activity,
     CourseItem
   },
   data() {
@@ -37,6 +32,9 @@ export default {
       <div class="col-lg-3 col-md-4 col-sm-6" v-for="(number, index) in courses" :key="index">
         <CourseItem 
           image="/upload/image/1.png"
+          category="HOW TO USE"
+          title="Novation AFX Station Review With King Unique"
+          link="novation-afx-station-review-with-king-unique"
         >
         </CourseItem>
       </div>
