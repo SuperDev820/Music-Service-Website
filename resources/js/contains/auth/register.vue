@@ -52,26 +52,6 @@ export default {
             this.regError = error ? error : "";
             this.isRegisterError = true;
           })
-        // this.register({
-        //   email: this.email,
-        //   password: this.password
-        // })
-        //   // eslint-disable-next-line no-unused-vars
-        //   .then(token => {
-        //     this.tryingToRegister = false;
-        //     this.isRegisterError = false;
-        //     this.registerSuccess = true;
-        //     if (this.registerSuccess) {
-        //       this.$router.push(
-        //         this.$route.query.redirectFrom || { name: "home" }
-        //       );
-        //     }
-        //   })
-        //   .catch(error => {
-        //     this.tryingToRegister = false;
-        //     this.regError = error ? error : "";
-        //     this.isRegisterError = true;
-        //   })
       );
     }
   }

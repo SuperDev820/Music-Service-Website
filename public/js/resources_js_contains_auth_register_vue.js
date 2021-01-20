@@ -71,27 +71,7 @@ __webpack_require__.r(__webpack_exports__);
         _this.tryingToRegister = false;
         _this.regError = error ? error : "";
         _this.isRegisterError = true;
-      }) // this.register({
-      //   email: this.email,
-      //   password: this.password
-      // })
-      //   // eslint-disable-next-line no-unused-vars
-      //   .then(token => {
-      //     this.tryingToRegister = false;
-      //     this.isRegisterError = false;
-      //     this.registerSuccess = true;
-      //     if (this.registerSuccess) {
-      //       this.$router.push(
-      //         this.$route.query.redirectFrom || { name: "home" }
-      //       );
-      //     }
-      //   })
-      //   .catch(error => {
-      //     this.tryingToRegister = false;
-      //     this.regError = error ? error : "";
-      //     this.isRegisterError = true;
-      //   })
-      ;
+      });
     }
   })
 });
@@ -589,7 +569,7 @@ hiddenKeys[HIDDEN] = true;
   \************************************************/
 /***/ (function(module) {
 
-module.exports = "/images/logo-sm.png?2f765016923b89510ea8a908bb05f8d0";
+module.exports = "/images/logo-sm.png?a44319006679b7182083bdc1d71565f4";
 
 /***/ }),
 

@@ -17,7 +17,9 @@ class CreateTutorialsTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('priority');
-            $table->string('link');
+            $table->string('source');
+            $table->integer('time');
+            $table->string('description');
             $table->foreignId('course_id')->constrained('courses');
             $table->timestamps();
         });

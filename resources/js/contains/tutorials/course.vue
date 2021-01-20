@@ -1,4 +1,6 @@
 <script>
+  import {mapActions, mapGetters} from 'vuex';
+
   import Layout from "./subcomponent/layout";
   import appConfig from "@/app.config";
   import StarRating from "vue-star-rating";
@@ -14,13 +16,46 @@
       StarRating,
       CourseItem
     },
-    data() {
-      return {
-        courses : [1, 2, 3, 4]
-      };
+    methods: {
+      ...mapActions([
+        'getCourseById',
+      ]),
+      selectTutorial(id) {
+        let cnt = this.getCourse.tutorials.length;
+        this.getCourse.tutorials.forEach((tutorial, index) => {
+          if(tutorial.id == id){
+            this.tutorial = tutorial;
+            if(index + 1 < cnt)
+              this.next_tutorial = this.getCourse.tutorials[index + 1];
+            else
+              this.next_tutorial = {};
+
+          }
+        })
+      }
+    },
+    computed: {
+      ...mapGetters([
+        'getCourse',
+      ]),
+    },
+    watch: {
+      getCourse: function(course) {
+        if (course.tutorials.length != 0)
+          this.tutorial = course.tutorials[0];
+        if (course.tutorials.length > 1)
+          this.next_tutorial = course.tutorials[1];
+      }
     },
     mounted() {
-        console.log(this.$route.params.title);
+      this.getCourseById(this.$route.params.title);
+    },
+    data() {
+      return {
+        courses: [1, 2, 3, 4],
+        tutorial: {},
+        next_tutorial: {},
+      };
     }
   };
 </script>
@@ -31,12 +66,12 @@
       <div class="d-flex justify-content-between align-items-center pb-4">
         <div>
           <div style="border-left: solid #52ec52 3px;padding-left: 10px;">
-            HOW TO USE
+            {{ getCourse.category != undefined ? getCourse.category.name : null }}
           </div>
-          <h1 class="my-3">Novation AFX Station Review with King Unique</h1>
+          <h1 class="my-3">{{ getCourse.title }}</h1>
           <div class="d-flex">
             <div class="pr-2" style="border-right: 1px solid grey;;" v-b-tooltip.hover title="Subscribe to rate this course">
-              <star-rating :rtl="true" :rating="2.5" :read-only="true" :increment="0.1" :star-size="23"></star-rating>
+              <star-rating :rtl="true" :rating="getCourse.rate" :read-only="true" :increment="0.1" :star-size="23"></star-rating>
             </div>
             <div class="pl-2 pt-1" v-b-tooltip.hover title="Sign in to add to favorites">
               <span class="pr-2">Add to my course</span>
@@ -48,13 +83,13 @@
           <b-media class="" vertical-align="center">
             <template v-slot:aside>
               <b-img
-                :src="require('@/assets/images/users/user-5.jpg')"
+                :src="getCourse.tutor != undefined? getCourse.tutor.avatar : ''"
                 rounded
                 height="100"
                 alt="Generic tutor image"
               ></b-img>
             </template>
-            <p class="pt-4"><span>by</span> King Unique<br>Beginner and Intermediate<br>00h 55m</p>
+            <p class="pt-4"><span>by</span> {{ getCourse.tutor != undefined? getCourse.tutor.name : null }}<br>Beginner and Intermediate<br>00h 55m</p>
           </b-media>
         </div>
       </div>
@@ -64,17 +99,17 @@
           type="iframe"
           aspect="21by9"
           class="embed-responsive-item"
-          src="/video/1.mp4"
+          :src="tutorial.source"
         ></b-embed>
         <div class="d-flex justify-content-between bg-black p-4">
           <div>
             <p class="text-muted mb-0">NOW PLAYING</p>
-            <p class="mb-0">Tutorial 01 - Introduction</p>
+            <p class="mb-0">Tutorial {{ tutorial.priority }} - {{ tutorial.name }}</p>
           </div>
           <div class="d-flex align-items-center">
             <div class="text-right pr-4">
               <p class="text-muted mb-0">UP NEXT</p>
-              <p class="mb-0" style="cursor: pointer;">Tutorial 02 - Overview</p>
+              <p class="mb-0" style="cursor: pointer;">{{ next_tutorial.priority!= undefined? "Tutorial " + next_tutorial.priority + " - " + next_tutorial.name : " "}}</p>
             </div>
             <a href="#">
               <i class="fas fa-bars font-30"></i>
@@ -84,11 +119,11 @@
         <div class="row mx-0 p-4" style="background-color: #a7a7a71c;">
           <div class="col-4 pb-3">
             <h5 class="text-muted">TUTORIAL DESCRIPTION</h5>
-            <p class="mb-0">So does this synth make you become Aphex Twin?</p>
+            <p class="mb-0">{{ tutorial.description }}</p>
           </div>
           <div class="col-4 pb-3" style="border-left: 1px solid grey;">
             <h5 class="text-muted">SOFTWARE</h5>
-            <p class="mb-0">Novation AFX Station</p>
+            <p class="mb-0">{{ getCourse.software != undefined? getCourse.software.name: "" }}</p>
           </div>
           <div class="col-4 pb-3" style="border-left: 1px solid grey;">
             <h5 class="text-muted">COURSE PROGRESS</h5>
@@ -106,24 +141,13 @@
                 <span class="d-none d-sm-inline-block">Tutorials</span>
               </template>
               <ul class="p-0">
-                <li class="tutorial-list d-flex justify-content-between align-items-center p-3">
-                  <div class="title d-flex align-items-center">
+                <li class="tutorial-list d-flex justify-content-between align-items-center p-3" v-for="(tutorial, index) in getCourse.tutorials" :key="index">
+                  <div class="title d-flex align-items-center" @click="selectTutorial(tutorial.id)">
                     <i class="fas fa-play-circle font-24 mr-3"></i>
-                    <p class="mb-0">Tutorial 01 - Introduction</p>
+                    <p class="mb-0">Tutorial {{ index+1 }} - {{ tutorial.name }}</p>
                   </div>
                   <div>
-                    <span class="pr-3 text-muted">03:33</span>
-                    <i class="far fa-star pr-3" v-b-tooltip.hover title="Sign in to add to favorites"></i>
-                    <i class="fas fa-bars" v-b-tooltip.hover title="Sign in to add to list"></i>
-                  </div>
-                </li>
-                <li class="tutorial-list d-flex justify-content-between align-items-center p-3">
-                  <div class="title d-flex align-items-center">
-                    <i class="fas fa-play-circle font-24 mr-3"></i>
-                    <p class="mb-0">Tutorial 02 - Overview</p>
-                  </div>
-                  <div>
-                    <span class="pr-3 text-muted">16:57</span>
+                    <span class="pr-3 text-muted">{{ Math.floor(tutorial.time/60) + ":" + tutorial.time%60 }}</span>
                     <i class="far fa-star pr-3" v-b-tooltip.hover title="Sign in to add to favorites"></i>
                     <i class="fas fa-bars" v-b-tooltip.hover title="Sign in to add to list"></i>
                   </div>
@@ -136,9 +160,7 @@
               </template>
               <div class="p-3">
                 <h5 class="text-muted">COURSE DESCRIPTION</h5>
-                <p>We got our hands on the Novation AFX Station this week and of course King Unique was the obvious choice to dive into everything this Aphex Twin remixed monosynth has to offer!</p>
-                <p>Designed in collaboration with electronic music legend Richard D James aka Aphex Twin, the AFX Station has the same powerful feature set as Bass Station II with the addition of AFX Mode pre-installed revolutionising the way the monosynth can be played and programmed.</p>
-                <p>But will it make you become Aphex Twin? Let’s find out!</p>
+                <p>{{ getCourse.detail }}</p>
               </div>
             </b-tab>
             <b-tab>
@@ -192,7 +214,7 @@
               image="/upload/image/1.png"
               category="HOW TO USE"
               title="Novation AFX Station Review With King Unique"
-              link="novation-afx-station-review-with-king-unique"
+              link="1"
             >
             </CourseItem>
           </div>
