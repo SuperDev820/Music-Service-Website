@@ -15,6 +15,13 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->decimal('rate', 2, 2);
+            $table->string('detail');
+            $table->foreignId('category_id')->constrained('categories');
+            $table->foreignId('genre_id')->constrained('genres');
+            $table->foreignId('software_id')->constrained('software');
+            $table->foreignId('tutor_id')->constrained('tutors');
             $table->timestamps();
         });
     }

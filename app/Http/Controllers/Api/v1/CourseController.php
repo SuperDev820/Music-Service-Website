@@ -1,24 +1,63 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
 
 use App\Models\Course;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CourseController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Create a new AuthController instance.
+     *
+     * @return void
+     */
+    public function __construct() {
+        $this->middleware('auth:api', ['except' => []]);
+    }
+    /**
+     * Response all data
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function getAll()
     {
-        //
+        $courses = Course::all();
+        foreach ($courses as $course) {
+            $course->category;
+            $course->software;
+            $course->genre;
+            $course->tutor;
+        }
+        return response()->json([
+            'message' => 'success',
+            'courses' => $courses
+        ], 200);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Response one data by id
+     * 
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function getById(Request $request, $courseId)
+    {
+        $course = Course::find($courseId);
+        $course->category;
+        $course->software;
+        $course->genre;
+        $course->tutor;
+        $course->tutorials;
+        return response()->json([
+            'message' => 'success',
+            'course' => $course,
+        ], 200);
+    }
+
+    /**
+     * Create new data
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,46 +67,12 @@ class CourseController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Course  $course
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Course $course)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Course  $course
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Course $course)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Course $course)
+    public function update(Request $request)
     {
         //
     }
@@ -75,10 +80,10 @@ class CourseController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Course  $course
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Course $course)
+    public function delete(Request $request)
     {
         //
     }
