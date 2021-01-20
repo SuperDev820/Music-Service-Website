@@ -50,7 +50,7 @@ export default {
               <img src="@/assets/images/logo-sm.png" alt height="30" />
             </span>
             <span class="logo-lg">
-              <img src="@/assets/images/logo-dark.png" alt height="45" width="130" style="border-radius: 3px;" />
+              <img src="@/assets/images/logo-dark.png" alt height="60" width="130" />
             </span>
           </a>
 
@@ -59,7 +59,7 @@ export default {
               <img src="@/assets/images/logo-sm.png" alt height="30" />
             </span>
             <span class="logo-lg">
-              <img src="@/assets/images/logo-light.png" alt height="45" width="130" style="border-radius: 3px;" />
+              <img src="@/assets/images/logo-light.png" alt height="60" width="130" />
             </span>
           </a>
         </div>

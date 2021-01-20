@@ -51,12 +51,10 @@
         <Subnav />
         <div class="main-content">
           <div class="page-content">
-            <div class="container-fluid">
-              <slot />
-            </div>
+            <slot />
           </div>
-          <Footer />
         </div>
+        <Footer />
         <RightBar />
       </div>
     </template>

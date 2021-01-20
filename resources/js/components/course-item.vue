@@ -20,7 +20,7 @@ export default {
             <b-img :src="image" fluid class="course-image"></b-img>
             <div class="d-flex justify-content-between align-items-center category">
                 <div class="category-name" onselectstart="return false;">{{category}}</div>
-                <i class="ion ion-md-add-circle-outline" style="font-size: 24px;"></i>
+                <i class="ion ion-md-add-circle-outline" style="font-size: 24px;" v-b-tooltip.hover.left="'Add to My Courses'"></i>
             </div>
             <div class="title" onselectstart="return false;">{{title}}</div>
         </div>

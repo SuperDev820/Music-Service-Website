@@ -6,7 +6,7 @@
           <div class="mr-4">
             <a href="/">
               <span class="logo-lg">
-                <img src="@/assets/images/logo-light.png" alt height="45" width="130" style="border-radius: 3px;" />
+                <img src="@/assets/images/logo-sm.png" alt height="50" width="50" />
               </span>
             </a>
           </div>
