@@ -72,11 +72,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
-/* harmony import */ var E_WorkSpace_task_web_laravel_tutorial_project_turtorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
-=======
-/* harmony import */ var F_condor_Laravel_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
->>>>>>> 1b4efdc94e5d5e4da88b026e35f0800e784dfb5a
+/* harmony import */ var D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var _state_helpers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/state/helpers */ "./resources/js/state/helpers.js");
 
 
@@ -127,11 +123,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-<<<<<<< HEAD
-  methods: (0,E_WorkSpace_task_web_laravel_tutorial_project_turtorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)((0,E_WorkSpace_task_web_laravel_tutorial_project_turtorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({}, _state_helpers__WEBPACK_IMPORTED_MODULE_1__.layoutMethods), {}, {
-=======
-  methods: (0,F_condor_Laravel_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)((0,F_condor_Laravel_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({}, _state_helpers__WEBPACK_IMPORTED_MODULE_1__.layoutMethods), {}, {
->>>>>>> 1b4efdc94e5d5e4da88b026e35f0800e784dfb5a
+  methods: (0,D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)((0,D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({}, _state_helpers__WEBPACK_IMPORTED_MODULE_1__.layoutMethods), {}, {
     /**
      * menu clicked show the subelement
      */
@@ -238,12 +230,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.description.js */ "./node_modules/core-js/modules/es.symbol.description.js");
 /* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_1__);
-<<<<<<< HEAD
 /* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
 /* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var E_WorkSpace_task_web_laravel_tutorial_project_turtorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.mjs");
 /* harmony import */ var _subcomponent_layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./subcomponent/layout */ "./resources/js/contains/tutorials/subcomponent/layout.vue");
 /* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/app.config */ "./resources/js/app.config.json");
@@ -254,13 +245,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-=======
-/* harmony import */ var _subcomponent_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./subcomponent/layout */ "./resources/js/contains/tutorials/subcomponent/layout.vue");
-/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/app.config */ "./resources/js/app.config.json");
-/* harmony import */ var vue_star_rating__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-star-rating */ "./node_modules/vue-star-rating/dist/VueStarRating.common.js");
-/* harmony import */ var vue_star_rating__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_star_rating__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_course_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/course-item */ "./resources/js/components/course-item.vue");
->>>>>>> 1b4efdc94e5d5e4da88b026e35f0800e784dfb5a
 
 
 
@@ -272,7 +256,6 @@ __webpack_require__.r(__webpack_exports__);
     title: "TutoiralCourse",
     meta: [{
       name: "description",
-<<<<<<< HEAD
       content: _app_config__WEBPACK_IMPORTED_MODULE_6__.description
     }]
   },
@@ -281,7 +264,7 @@ __webpack_require__.r(__webpack_exports__);
     StarRating: (vue_star_rating__WEBPACK_IMPORTED_MODULE_7___default()),
     CourseItem: _components_course_item__WEBPACK_IMPORTED_MODULE_8__.default
   },
-  methods: (0,E_WorkSpace_task_web_laravel_tutorial_project_turtorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_4__.default)((0,E_WorkSpace_task_web_laravel_tutorial_project_turtorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_4__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_9__.mapActions)(['getCourseById'])), {}, {
+  methods: (0,D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_4__.default)((0,D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_4__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_9__.mapActions)(['getCourseById'])), {}, {
     selectTutorial: function selectTutorial(id) {
       var _this = this;
 
@@ -294,7 +277,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     }
   }),
-  computed: (0,E_WorkSpace_task_web_laravel_tutorial_project_turtorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_4__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_9__.mapGetters)(['getCourse'])),
+  computed: (0,D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_4__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_9__.mapGetters)(['getCourse'])),
   watch: {
     getCourse: function getCourse(course) {
       if (course.tutorials.length != 0) this.tutorial = course.tutorials[0];
@@ -310,23 +293,6 @@ __webpack_require__.r(__webpack_exports__);
       tutorial: {},
       next_tutorial: {}
     };
-=======
-      content: _app_config__WEBPACK_IMPORTED_MODULE_3__.description
-    }]
-  },
-  components: {
-    Layout: _subcomponent_layout__WEBPACK_IMPORTED_MODULE_2__.default,
-    StarRating: (vue_star_rating__WEBPACK_IMPORTED_MODULE_4___default()),
-    CourseItem: _components_course_item__WEBPACK_IMPORTED_MODULE_5__.default
-  },
-  data: function data() {
-    return {
-      courses: [1, 2, 3, 4]
-    };
-  },
-  mounted: function mounted() {
-    console.log(this.$route.params.title);
->>>>>>> 1b4efdc94e5d5e4da88b026e35f0800e784dfb5a
   }
 });
 
@@ -398,7 +364,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var F_condor_Laravel_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var simplebar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! simplebar-vue */ "./node_modules/simplebar-vue/dist/simplebar-vue.esm.js");
 /* harmony import */ var metismenujs_dist_metismenujs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! metismenujs/dist/metismenujs */ "./node_modules/metismenujs/dist/metismenujs.js");
 /* harmony import */ var metismenujs_dist_metismenujs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(metismenujs_dist_metismenujs__WEBPACK_IMPORTED_MODULE_2__);
@@ -461,7 +427,7 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-  methods: (0,F_condor_Laravel_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)((0,F_condor_Laravel_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({}, _state_helpers__WEBPACK_IMPORTED_MODULE_3__.layoutMethods), {}, {
+  methods: (0,D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)((0,D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({}, _state_helpers__WEBPACK_IMPORTED_MODULE_3__.layoutMethods), {}, {
     changeLayout: function changeLayout(layout) {
       this.changeLayoutType({
         layoutType: layout
@@ -503,16 +469,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "authMethods": function() { return /* binding */ authMethods; },
 /* harmony export */   "layoutMethods": function() { return /* binding */ layoutMethods; }
 /* harmony export */ });
-/* harmony import */ var F_condor_Laravel_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.mjs");
 
 
-var authComputed = (0,F_condor_Laravel_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)((0,F_condor_Laravel_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapState)('auth', {
+var authComputed = (0,D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)((0,D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapState)('auth', {
   currentUser: function currentUser(state) {
     return state.currentUser;
   }
 })), (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)('auth', ['loggedIn']));
-var layoutComputed = (0,F_condor_Laravel_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapState)('layout', {
+var layoutComputed = (0,D_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapState)('layout', {
   layoutType: function layoutType(state) {
     return state.layoutType;
   },
@@ -2842,25 +2808,9 @@ module.exports = "/images/img-2.png?714cfaa84d2e3402537aa471e47593dc";
 /*!****************************************************!*\
   !*** ./resources/js/assets/images/small/img-1.jpg ***!
   \****************************************************/
-<<<<<<< HEAD
 /***/ (function(module) {
 
 module.exports = "/images/img-1.jpg?f90f903c32c70c8d75c6f311ebaf8627";
-=======
-/***/ (function(module) {
-
-module.exports = "/images/img-1.jpg?f90f903c32c70c8d75c6f311ebaf8627";
-
-/***/ }),
-
-/***/ "./resources/js/assets/images/small/img-2.jpg":
-/*!****************************************************!*\
-  !*** ./resources/js/assets/images/small/img-2.jpg ***!
-  \****************************************************/
-/***/ (function(module) {
-
-module.exports = "/images/img-2.jpg?750ced6e574bde85d858e64e0fa843ff";
->>>>>>> 1b4efdc94e5d5e4da88b026e35f0800e784dfb5a
 
 /***/ }),
 
@@ -7035,45 +6985,6 @@ component.options.__file = "resources/js/components/right-bar.vue"
 /*!*********************************************!*\
   !*** ./resources/js/components/sub-nav.vue ***!
   \*********************************************/
-<<<<<<< HEAD
-=======
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _sub_nav_vue_vue_type_template_id_6842429b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sub-nav.vue?vue&type=template&id=6842429b& */ "./resources/js/components/sub-nav.vue?vue&type=template&id=6842429b&");
-/* harmony import */ var _sub_nav_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sub-nav.vue?vue&type=script&lang=js& */ "./resources/js/components/sub-nav.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
-  _sub_nav_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
-  _sub_nav_vue_vue_type_template_id_6842429b___WEBPACK_IMPORTED_MODULE_0__.render,
-  _sub_nav_vue_vue_type_template_id_6842429b___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/sub-nav.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/topbar.vue":
-/*!********************************************!*\
-  !*** ./resources/js/components/topbar.vue ***!
-  \********************************************/
->>>>>>> 1b4efdc94e5d5e4da88b026e35f0800e784dfb5a
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7781,20 +7692,11 @@ var staticRenderFns = [
       _c("a", { attrs: { href: "/" } }, [
         _c("span", { staticClass: "logo-lg" }, [
           _c("img", {
-<<<<<<< HEAD
-            staticStyle: { "border-radius": "3px" },
-            attrs: {
-              src: __webpack_require__(/*! @/assets/images/logo-light.png */ "./resources/js/assets/images/logo-light.png"),
-              alt: "",
-              height: "45",
-              width: "130"
-=======
             attrs: {
               src: __webpack_require__(/*! @/assets/images/logo-sm.png */ "./resources/js/assets/images/logo-sm.png"),
               alt: "",
               height: "50",
               width: "50"
->>>>>>> 1b4efdc94e5d5e4da88b026e35f0800e784dfb5a
             }
           })
         ])
@@ -8064,201 +7966,6 @@ var render = function() {
                       _vm._v("PLUGINS\n            ")
                     ]
                   ),
-<<<<<<< HEAD
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "dropdown-menu mega-dropdown-menu dropdown-mega-menu-lg",
-                      attrs: { "aria-labelledby": "topnav-uielement" }
-                    },
-                    [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-lg-6" }, [
-                          _c(
-                            "div",
-                            [
-                              _c(
-                                "router-link",
-                                {
-                                  staticClass: "dropdown-item side-nav-link",
-                                  attrs: { tag: "a", to: "/tutorials/all" }
-                                },
-                                [_vm._v("Plugin 1")]
-                              )
-                            ],
-                            1
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-lg-6" }, [
-                          _c(
-                            "div",
-                            [
-                              _c(
-                                "router-link",
-                                {
-                                  staticClass: "dropdown-item side-nav-link",
-                                  attrs: { tag: "a", to: "/tutorials/all" }
-                                },
-                                [_vm._v("Plugin 2")]
-                              )
-                            ],
-                            1
-                          )
-                        ])
-                      ])
-                    ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link side-nav-link",
-                        attrs: { tag: "a", to: "/tutorials" }
-                      },
-                      [
-                        _c("i", { staticClass: "ti-archive mr-2" }),
-                        _vm._v("GIFT/VOUCHERS\n            ")
-                      ]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "li",
-                  { staticClass: "nav-item" },
-                  [
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "nav-link side-nav-link",
-                        attrs: { tag: "a", to: "/tutorials" }
-                      },
-                      [
-                        _c("i", { staticClass: "ti-bookmark-alt mr-2" }),
-                        _vm._v("FORUM\n            ")
-                      ]
-                    )
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("li", { staticClass: "nav-item" }, [
-                  _c("div", { staticClass: "dropdown pt-1" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass:
-                          "btn noti-icon right-bar-toggle toggle-right",
-                        attrs: { type: "button" },
-                        on: { click: _vm.toggleRightSidebar }
-                      },
-                      [_c("i", { staticClass: "fa fa-search toggle-right" })]
-                    )
-                  ])
-                ])
-              ])
-            ]
-          )
-        ]
-      )
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/topbar.vue?vue&type=template&id=5d3c11a9&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/topbar.vue?vue&type=template&id=5d3c11a9& ***!
-  \******************************************************************************************************************************************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": function() { return /* binding */ render; },
-/* harmony export */   "staticRenderFns": function() { return /* binding */ staticRenderFns; }
-/* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("header", { attrs: { id: "page-topbar" } }, [
-    _c("div", { staticClass: "navbar-header" }, [
-      _c(
-        "div",
-        { staticClass: "d-flex" },
-        [
-          _c(
-            "div",
-            { staticClass: "navbar-brand-box" },
-            [
-              _c(
-                "router-link",
-                { staticClass: "logo logo-dark", attrs: { tag: "a", to: "/" } },
-                [
-                  _c("span", { staticClass: "logo-sm" }, [
-                    _c("img", {
-                      attrs: {
-                        src: __webpack_require__(/*! @/assets/images/logo-sm.png */ "./resources/js/assets/images/logo-sm.png"),
-                        alt: "",
-                        height: "30"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "logo-lg" }, [
-                    _c("img", {
-                      staticStyle: { "border-radius": "3px" },
-                      attrs: {
-                        src: __webpack_require__(/*! @/assets/images/logo-dark.png */ "./resources/js/assets/images/logo-dark.png"),
-                        alt: "",
-                        height: "45",
-                        width: "130"
-                      }
-                    })
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "router-link",
-                {
-                  staticClass: "logo logo-light",
-                  attrs: { tag: "a", to: "/" }
-                },
-                [
-                  _c("span", { staticClass: "logo-sm" }, [
-                    _c("img", {
-                      attrs: {
-                        src: __webpack_require__(/*! @/assets/images/logo-sm.png */ "./resources/js/assets/images/logo-sm.png"),
-                        alt: "",
-                        height: "30"
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "logo-lg" }, [
-                    _c("img", {
-                      staticStyle: { "border-radius": "3px" },
-                      attrs: {
-                        src: __webpack_require__(/*! @/assets/images/logo-light.png */ "./resources/js/assets/images/logo-light.png"),
-                        alt: "",
-                        height: "45",
-=======
                   _vm._v(" "),
                   _c(
                     "div",
@@ -8450,7 +8157,6 @@ var render = function() {
                         src: __webpack_require__(/*! @/assets/images/logo-light.png */ "./resources/js/assets/images/logo-light.png"),
                         alt: "",
                         height: "60",
->>>>>>> 1b4efdc94e5d5e4da88b026e35f0800e784dfb5a
                         width: "130"
                       }
                     })
@@ -8628,7 +8334,6 @@ var render = function() {
                   "padding-left": "10px"
                 }
               },
-<<<<<<< HEAD
               [
                 _vm._v(
                   "\n          " +
@@ -8640,13 +8345,10 @@ var render = function() {
                     "\n        "
                 )
               ]
-=======
-              [_vm._v("\n          HOW TO USE\n        ")]
->>>>>>> 1b4efdc94e5d5e4da88b026e35f0800e784dfb5a
             ),
             _vm._v(" "),
             _c("h1", { staticClass: "my-3" }, [
-              _vm._v("Novation AFX Station Review with King Unique")
+              _vm._v(_vm._s(_vm.getCourse.title))
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex" }, [
@@ -8668,7 +8370,7 @@ var render = function() {
                   _c("star-rating", {
                     attrs: {
                       rtl: true,
-                      rating: 2.5,
+                      rating: _vm.getCourse.rate,
                       "read-only": true,
                       increment: 0.1,
                       "star-size": 23
@@ -8736,7 +8438,14 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", { staticClass: "pt-4" }, [
                     _c("span", [_vm._v("by")]),
-                    _vm._v(" King Unique"),
+                    _vm._v(
+                      " " +
+                        _vm._s(
+                          _vm.getCourse.tutor != undefined
+                            ? _vm.getCourse.tutor.name
+                            : null
+                        )
+                    ),
                     _c("br"),
                     _vm._v("Beginner and Intermediate"),
                     _c("br"),
@@ -8903,7 +8612,6 @@ var render = function() {
                   },
                   [
                     _vm._v(" "),
-<<<<<<< HEAD
                     _c(
                       "ul",
                       { staticClass: "p-0" },
@@ -8956,115 +8664,35 @@ var render = function() {
                                 )
                               ]),
                               _vm._v(" "),
-=======
-                    _c("ul", { staticClass: "p-0" }, [
-                      _c(
-                        "li",
-                        {
-                          staticClass:
-                            "tutorial-list d-flex justify-content-between align-items-center p-3"
-                        },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "title d-flex align-items-center" },
-                            [
->>>>>>> 1b4efdc94e5d5e4da88b026e35f0800e784dfb5a
                               _c("i", {
-                                staticClass: "fas fa-play-circle font-24 mr-3"
+                                directives: [
+                                  {
+                                    name: "b-tooltip",
+                                    rawName: "v-b-tooltip.hover",
+                                    modifiers: { hover: true }
+                                  }
+                                ],
+                                staticClass: "far fa-star pr-3",
+                                attrs: { title: "Sign in to add to favorites" }
                               }),
                               _vm._v(" "),
-                              _c("p", { staticClass: "mb-0" }, [
-                                _vm._v("Tutorial 01 - Introduction")
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c("span", { staticClass: "pr-3 text-muted" }, [
-                              _vm._v("03:33")
-                            ]),
-                            _vm._v(" "),
-                            _c("i", {
-                              directives: [
-                                {
-                                  name: "b-tooltip",
-                                  rawName: "v-b-tooltip.hover",
-                                  modifiers: { hover: true }
-                                }
-                              ],
-                              staticClass: "far fa-star pr-3",
-                              attrs: { title: "Sign in to add to favorites" }
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              directives: [
-                                {
-                                  name: "b-tooltip",
-                                  rawName: "v-b-tooltip.hover",
-                                  modifiers: { hover: true }
-                                }
-                              ],
-                              staticClass: "fas fa-bars",
-                              attrs: { title: "Sign in to add to list" }
-                            })
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "li",
-                        {
-                          staticClass:
-                            "tutorial-list d-flex justify-content-between align-items-center p-3"
-                        },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "title d-flex align-items-center" },
-                            [
                               _c("i", {
-                                staticClass: "fas fa-play-circle font-24 mr-3"
-                              }),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "mb-0" }, [
-                                _vm._v("Tutorial 02 - Overview")
-                              ])
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("div", [
-                            _c("span", { staticClass: "pr-3 text-muted" }, [
-                              _vm._v("16:57")
-                            ]),
-                            _vm._v(" "),
-                            _c("i", {
-                              directives: [
-                                {
-                                  name: "b-tooltip",
-                                  rawName: "v-b-tooltip.hover",
-                                  modifiers: { hover: true }
-                                }
-                              ],
-                              staticClass: "far fa-star pr-3",
-                              attrs: { title: "Sign in to add to favorites" }
-                            }),
-                            _vm._v(" "),
-                            _c("i", {
-                              directives: [
-                                {
-                                  name: "b-tooltip",
-                                  rawName: "v-b-tooltip.hover",
-                                  modifiers: { hover: true }
-                                }
-                              ],
-                              staticClass: "fas fa-bars",
-                              attrs: { title: "Sign in to add to list" }
-                            })
-                          ])
-                        ]
-                      )
-                    ])
+                                directives: [
+                                  {
+                                    name: "b-tooltip",
+                                    rawName: "v-b-tooltip.hover",
+                                    modifiers: { hover: true }
+                                  }
+                                ],
+                                staticClass: "fas fa-bars",
+                                attrs: { title: "Sign in to add to list" }
+                              })
+                            ])
+                          ]
+                        )
+                      }),
+                      0
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -9094,23 +8722,7 @@ var render = function() {
                         _vm._v("COURSE DESCRIPTION")
                       ]),
                       _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "We got our hands on the Novation AFX Station this week and of course King Unique was the obvious choice to dive into everything this Aphex Twin remixed monosynth has to offer!"
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "Designed in collaboration with electronic music legend Richard D James aka Aphex Twin, the AFX Station has the same powerful feature set as Bass Station II with the addition of AFX Mode pre-installed revolutionising the way the monosynth can be played and programmed."
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "But will it make you become Aphex Twin? Let’s find out!"
-                        )
-                      ])
+                      _c("p", [_vm._v(_vm._s(_vm.getCourse.detail))])
                     ])
                   ]
                 ),
@@ -9329,31 +8941,11 @@ var render = function() {
       _vm._v(" "),
       _c("Subnav"),
       _vm._v(" "),
-<<<<<<< HEAD
-      _c(
-        "div",
-        { staticClass: "main-content" },
-        [
-          _c("div", { staticClass: "page-content" }, [
-            _c(
-              "div",
-              { staticClass: "container-fluid" },
-              [_vm._t("default")],
-              2
-            )
-          ]),
-          _vm._v(" "),
-          _c("Footer")
-        ],
-        1
-      ),
-=======
       _c("div", { staticClass: "main-content" }, [
         _c("div", { staticClass: "page-content" }, [_vm._t("default")], 2)
       ]),
       _vm._v(" "),
       _c("Footer"),
->>>>>>> 1b4efdc94e5d5e4da88b026e35f0800e784dfb5a
       _vm._v(" "),
       _c("RightBar")
     ],
