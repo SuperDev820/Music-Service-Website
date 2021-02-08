@@ -276,17 +276,23 @@ export default {
           <a class="dropdown-item" href="#">
             <i class="mdi mdi-wallet font-size-17 align-middle mr-1"></i> My Wallet
           </a>
-          <!-- <a class="dropdown-item d-block" href="#">
-            <span class="badge badge-success float-right">11</span>
-            <i class="mdi mdi-settings font-size-17 align-middle mr-1"></i> Settings
-          </a>
-          <a class="dropdown-item" href="#">
-            <i class="mdi mdi-lock-open-outline font-size-17 align-middle mr-1"></i> Lock screen
-          </a> -->
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-danger" href="#">
+          <a class="dropdown-item text-danger" href="javascript:;">
             <i class="bx bx-power-off font-size-17 align-middle mr-1 text-danger"></i> Logout
           </a>
+        </b-dropdown>
+
+        <b-dropdown class="d-inline-block" right toggle-class="header-item" variant="white">
+          <template v-slot:button-content>
+            <img
+              class="rounded-circle header-profile-user"
+              src="@/assets/images/users/user-4.jpg"
+              alt="Header Avatar"
+            />
+          </template>
+          <router-link tag="a" class="dropdown-item" to="">
+            <i class="mdi mdi-account-circle font-size-17 align-middle mr-1"></i> Sign In
+          </router-link>
         </b-dropdown>
 
         <!-- <div class="dropdown d-inline-block">
