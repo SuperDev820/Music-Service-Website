@@ -8,8 +8,6 @@ import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 // optional style for arrows & dots
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
-import {  } from "./data";
-
 export default {
   page: {
     title: "Homepage",
