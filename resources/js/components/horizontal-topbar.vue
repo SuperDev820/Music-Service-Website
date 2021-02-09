@@ -1,8 +1,20 @@
 <script>
+
+import {mapActions, mapGetters} from 'vuex';
 /**
  * Horizontal-topbar component
  */
 export default {
+  // data() {
+  //   return {
+  //     isAuthenticated: false,
+  //   }
+  // },
+  compputed: {
+    ...mapGetters([
+      'isAuthenticated',
+    ])
+  },
   methods: {
     initFullScreen() {
       document.body.classList.toggle("fullscreen-enable");
@@ -262,7 +274,7 @@ export default {
           Your Basket <i class="mdi mdi-cart mr-1"></i> £0.00
         </a>
 
-        <b-dropdown class="d-inline-block" right toggle-class="header-item" variant="white">
+        <b-dropdown class="d-inline-block" right toggle-class="header-item" variant="white" v-if="isAuthenticated === true">
           <template v-slot:button-content>
             <img
               class="rounded-circle header-profile-user"
@@ -282,7 +294,7 @@ export default {
           </a>
         </b-dropdown>
 
-        <b-dropdown class="d-inline-block" right toggle-class="header-item" variant="white">
+        <b-dropdown class="d-inline-block" right toggle-class="header-item" variant="white" v-else>
           <template v-slot:button-content>
             <img
               class="rounded-circle header-profile-user"
@@ -291,7 +303,7 @@ export default {
             />
           </template>
           <router-link tag="a" class="dropdown-item" to="">
-            <i class="mdi mdi-account-circle font-size-17 align-middle mr-1"></i> Sign In
+            <i class="mdi mdi-sign-direction font-size-17 align-middle mr-1"></i> Sign In
           </router-link>
         </b-dropdown>
 

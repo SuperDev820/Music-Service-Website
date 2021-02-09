@@ -5,7 +5,7 @@ export default [
         path: '/',
         // meta: { authRequired: true },
         name: 'home',
-        component: () => import('../contains/dashboard/home'),
+        component: () => import('../contains/home/home'),
     },
     {
         path: '/login',
@@ -96,5 +96,13 @@ export default [
         meta: {
             authRequired: true,
         },
+    },
+    {
+        path: '/admin',
+        name: 'Admin',
+        component: () => import('../contains/admin/dashboard'),
+        // meta: {
+        //     authRequired: true,
+        // },
     },
 ]

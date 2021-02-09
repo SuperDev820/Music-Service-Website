@@ -136,10 +136,21 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.mjs");
+
+
 /**
  * Horizontal-topbar component
  */
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  // data() {
+  //   return {
+  //     isAuthenticated: false,
+  //   }
+  // },
+  compputed: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_1__.mapGetters)(['isAuthenticated'])),
   methods: {
     initFullScreen: function initFullScreen() {
       document.body.classList.toggle("fullscreen-enable");
@@ -8522,112 +8533,129 @@ var render = function() {
           _vm._v(" "),
           _vm._m(1),
           _vm._v(" "),
-          _c(
-            "b-dropdown",
-            {
-              staticClass: "d-inline-block",
-              attrs: {
-                right: "",
-                "toggle-class": "header-item",
-                variant: "white"
-              },
-              scopedSlots: _vm._u([
+          _vm.isAuthenticated === true
+            ? _c(
+                "b-dropdown",
                 {
-                  key: "button-content",
-                  fn: function() {
-                    return [
-                      _c("img", {
-                        staticClass: "rounded-circle header-profile-user",
-                        attrs: {
-                          src: __webpack_require__(/*! @/assets/images/users/user-4.jpg */ "./resources/js/assets/images/users/user-4.jpg"),
-                          alt: "Header Avatar"
-                        }
-                      })
-                    ]
+                  staticClass: "d-inline-block",
+                  attrs: {
+                    right: "",
+                    "toggle-class": "header-item",
+                    variant: "white"
                   },
-                  proxy: true
-                }
-              ])
-            },
-            [
-              _vm._v(" "),
-              _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-                _c("i", {
-                  staticClass:
-                    "mdi mdi-account-circle font-size-17 align-middle mr-1"
-                }),
-                _vm._v(" Profile\n        ")
-              ]),
-              _vm._v(" "),
-              _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-                _c("i", {
-                  staticClass: "mdi mdi-wallet font-size-17 align-middle mr-1"
-                }),
-                _vm._v(" My Wallet\n        ")
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "dropdown-divider" }),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "dropdown-item text-danger",
-                  attrs: { href: "javascript:;" }
+                  scopedSlots: _vm._u(
+                    [
+                      {
+                        key: "button-content",
+                        fn: function() {
+                          return [
+                            _c("img", {
+                              staticClass: "rounded-circle header-profile-user",
+                              attrs: {
+                                src: __webpack_require__(/*! @/assets/images/users/user-4.jpg */ "./resources/js/assets/images/users/user-4.jpg"),
+                                alt: "Header Avatar"
+                              }
+                            })
+                          ]
+                        },
+                        proxy: true
+                      }
+                    ],
+                    null,
+                    false,
+                    3703459181
+                  )
                 },
                 [
-                  _c("i", {
-                    staticClass:
-                      "bx bx-power-off font-size-17 align-middle mr-1 text-danger"
-                  }),
-                  _vm._v(" Logout\n        ")
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "b-dropdown",
-            {
-              staticClass: "d-inline-block",
-              attrs: {
-                right: "",
-                "toggle-class": "header-item",
-                variant: "white"
-              },
-              scopedSlots: _vm._u([
-                {
-                  key: "button-content",
-                  fn: function() {
-                    return [
-                      _c("img", {
-                        staticClass: "rounded-circle header-profile-user",
-                        attrs: {
-                          src: __webpack_require__(/*! @/assets/images/users/user-4.jpg */ "./resources/js/assets/images/users/user-4.jpg"),
-                          alt: "Header Avatar"
-                        }
-                      })
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", attrs: { href: "#" } },
+                    [
+                      _c("i", {
+                        staticClass:
+                          "mdi mdi-account-circle font-size-17 align-middle mr-1"
+                      }),
+                      _vm._v(" Profile\n        ")
                     ]
-                  },
-                  proxy: true
-                }
-              ])
-            },
-            [
-              _vm._v(" "),
-              _c(
-                "router-link",
-                { staticClass: "dropdown-item", attrs: { tag: "a", to: "" } },
-                [
-                  _c("i", {
-                    staticClass:
-                      "mdi mdi-account-circle font-size-17 align-middle mr-1"
-                  }),
-                  _vm._v(" Sign In\n        ")
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "dropdown-item", attrs: { href: "#" } },
+                    [
+                      _c("i", {
+                        staticClass:
+                          "mdi mdi-wallet font-size-17 align-middle mr-1"
+                      }),
+                      _vm._v(" My Wallet\n        ")
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "dropdown-divider" }),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "dropdown-item text-danger",
+                      attrs: { href: "javascript:;" }
+                    },
+                    [
+                      _c("i", {
+                        staticClass:
+                          "bx bx-power-off font-size-17 align-middle mr-1 text-danger"
+                      }),
+                      _vm._v(" Logout\n        ")
+                    ]
+                  )
                 ]
               )
-            ],
-            1
-          )
+            : _c(
+                "b-dropdown",
+                {
+                  staticClass: "d-inline-block",
+                  attrs: {
+                    right: "",
+                    "toggle-class": "header-item",
+                    variant: "white"
+                  },
+                  scopedSlots: _vm._u([
+                    {
+                      key: "button-content",
+                      fn: function() {
+                        return [
+                          _c("img", {
+                            staticClass: "rounded-circle header-profile-user",
+                            attrs: {
+                              src: __webpack_require__(/*! @/assets/images/users/user-4.jpg */ "./resources/js/assets/images/users/user-4.jpg"),
+                              alt: "Header Avatar"
+                            }
+                          })
+                        ]
+                      },
+                      proxy: true
+                    }
+                  ])
+                },
+                [
+                  _vm._v(" "),
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "dropdown-item",
+                      attrs: { tag: "a", to: "" }
+                    },
+                    [
+                      _c("i", {
+                        staticClass:
+                          "mdi mdi-sign-direction font-size-17 align-middle mr-1"
+                      }),
+                      _vm._v(" Sign In\n        ")
+                    ]
+                  )
+                ],
+                1
+              )
         ],
         1
       )
