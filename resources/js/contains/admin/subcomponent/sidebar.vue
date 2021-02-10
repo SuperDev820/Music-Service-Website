@@ -89,70 +89,28 @@
             <ul class="metismenu list-unstyled" id="side-menu">
               <li class="menu-title">Main</li>
               <li>
-                <router-link tag="a" to="/tutorials" class="side-nav-link">
+                <router-link tag="a" to="/admin" class="side-nav-link">
                   <i class="ti-home"></i>
                   <span>Dashboard</span>
                 </router-link>
               </li>
               <li>
-                <router-link tag="a" to="/tutorials/all" class="side-nav-link">
+                <router-link tag="a" to="/admin/users" class="side-nav-link">
+                  <i class="ti-id-badge"></i>
+                  <span>Users</span>
+                </router-link>
+              </li>
+              <li>
+                <router-link tag="a" to="/admin/courses" class="side-nav-link">
                   <i class="ti-video-clapper"></i>
                   <span>All Courses</span>
                 </router-link>
               </li>
               <li>
-                <router-link tag="a" to="/tutorials/all" class="side-nav-link">
-                  <i class="ti-video-clapper"></i>
-                  <span>Free Courses</span>
-                </router-link>
-              </li>
-              <li>
-                <router-link tag="a" to="/tutorials/all" class="side-nav-link">
-                  <i class="ti-star"></i>
-                  <span>Popular</span>
-                </router-link>
-              </li>
-              <li>
-                <router-link tag="a" to="/tutorials/all" class="side-nav-link">
-                  <i class="ti-heart"></i>
-                  <span>Genres</span>
-                </router-link>
-              </li>
-              <li>
-                <router-link tag="a" to="/tutorials/all" class="side-nav-link">
-                  <i class="ti-tag"></i>
-                  <span>Courses Types</span>
-                </router-link>
-              </li>
-              <li>
-                <router-link tag="a" to="/tutorials/all" class="side-nav-link">
+                <router-link tag="a" to="/admin/tutors" class="side-nav-link">
                   <i class="ti-crown"></i>
                   <span>Tutors</span>
                 </router-link>
-              </li>
-              <li>
-                <router-link tag="a" to="/tutorials/all" class="side-nav-link">
-                  <i class="ti-heart"></i>
-                  <span>Software / DAW</span>
-                </router-link>
-              </li>
-
-              <li>
-                <a href="javascript: void(0);" class="has-arrow">
-                  <i class="ti-email"></i>
-                  <span>Email</span>
-                </a>
-                <ul class="sub-menu" aria-expanded="false">
-                  <li>
-                    <router-link to="/email/inbox" class="side-nav-link">Inbox</router-link>
-                  </li>
-                  <li>
-                    <router-link to="/email/read-email" class="side-nav-link">Email Read</router-link>
-                  </li>
-                  <li>
-                    <router-link to="/email/compose" class="side-nav-link">Email Compose</router-link>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>

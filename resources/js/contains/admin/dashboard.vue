@@ -1,13 +1,10 @@
 <script>
 import Layout from "./subcomponent/layout";
 import appConfig from "@/app.config";
-import Layout from "../layouts/main";
-import appConfig from "@/app.config";
 
 import Chart from "@/components/widgets/chart";
 import Stat from "@/components/widgets/widget-stat";
 import Transaction from "@/components/widgets/transaction";
-import Chat from "@/components/widgets/chat";
 import Activity from "@/components/widgets/activity";
 
 import { sparklineChartData, salesDonutChart, radialBarChart } from "./data";
@@ -22,7 +19,6 @@ export default {
     Chart,
     Stat,
     Transaction,
-    Chat,
     Activity
   },
   data() {
@@ -184,13 +180,10 @@ export default {
       <div class="col-sm-6">
         <div class="page-title-box">
           <h4 class="font-size-18">Dashboard</h4>
-          <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item active">Welcome to Veltrix Dashboard</li>
-          </ol>
         </div>
       </div>
 
-      <div class="col-sm-6">
+      <!-- <div class="col-sm-6">
         <div class="float-right d-none d-md-block">
           <b-dropdown right variant="primary">
             <template v-slot:button-content>
@@ -203,7 +196,7 @@ export default {
             <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
           </b-dropdown>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- end page title -->
     <div class="row">

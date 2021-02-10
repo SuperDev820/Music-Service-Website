@@ -184,4 +184,3 @@ export default {
     </div>
   </header>
 </template>
-

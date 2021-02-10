@@ -77,9 +77,9 @@ export default [
         path: '/tutorials',
         name: 'TutorialDashboard',
         component: () => import('../contains/tutorials/dashboard'),
-        meta: {
-            authRequired: true,
-        },
+        // meta: {
+        //     authRequired: true,
+        // },
     },
     {
         path: '/tutorials/all',
