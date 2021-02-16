@@ -8588,7 +8588,7 @@ var render = function() {
                         staticClass:
                           "mdi mdi-sign-direction font-size-17 align-middle mr-1"
                       }),
-                      _vm._v(" Sign In\n        ")
+                      _vm._v(" Log In\n        ")
                     ]
                   )
                 ],

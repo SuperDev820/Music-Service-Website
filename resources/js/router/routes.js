@@ -105,4 +105,12 @@ export default [
         //     authRequired: true,
         // },
     },
+    {
+        path: '/admin/users',
+        name: 'Users',
+        component: () => import('../contains/admin/users'),
+        // meta: {
+        //     authRequired: true,
+        // },
+    },
 ]

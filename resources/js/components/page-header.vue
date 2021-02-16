@@ -30,7 +30,7 @@ export default {
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
+    <!-- <div class="col-sm-6">
       <div class="float-right d-none d-md-block">
         <b-dropdown right variant="primary">
           <template v-slot:button-content>
@@ -43,7 +43,7 @@ export default {
           <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
         </b-dropdown>
       </div>
-    </div>
+    </div> -->
   </div>
   <!-- end page title -->
 </template>

@@ -1,6 +1,7 @@
 <script>
 import Layout from "./subcomponent/layout";
 import appConfig from "@/app.config";
+import PageHeader from "@/components/page-header";
 
 import Chart from "@/components/widgets/chart";
 import Stat from "@/components/widgets/widget-stat";
@@ -16,6 +17,7 @@ export default {
   },
   components: {
     Layout,
+    PageHeader,
     Chart,
     Stat,
     Transaction,
@@ -23,6 +25,17 @@ export default {
   },
   data() {
     return {
+      title: "Dashboard",
+      items: [
+        {
+          text: "AudioTriki",
+          href: "/"
+        },
+        {
+          text: "Dashboard",
+          active: true
+        }
+      ],
       sparklineChartData: sparklineChartData,
       salesDonutChart: salesDonutChart,
       radialBarChart: radialBarChart,
@@ -106,45 +119,6 @@ export default {
           status: "Pending"
         }
       ],
-      chatMessages: [
-        {
-          id: 1,
-          image: require("@/assets/images/users/user-2.jpg"),
-          name: "John Deo",
-          message: "Hello!",
-          time: "10:00"
-        },
-        {
-          id: 2,
-          image: require("@/assets/images/users/user-3.jpg"),
-          name: "Smith",
-          message: "Hi, How are you? What about our next meeting?",
-          time: "10:01",
-          odd: true
-        },
-        {
-          id: 3,
-          image: require("@/assets/images/users/user-2.jpg"),
-          name: "John Deo",
-          message: "Yeah everything is fine",
-          time: "10:01"
-        },
-        {
-          id: 4,
-          image: require("@/assets/images/users/user-3.jpg"),
-          name: "Smith",
-          message: "Wow that's great",
-          time: "10:02",
-          odd: true
-        },
-        {
-          id: 5,
-          image: require("@/assets/images/users/user-2.jpg"),
-          name: "John Deo",
-          message: "Yup!",
-          time: "10:03"
-        }
-      ],
       activityData: [
         {
           date: "Jan 22",
@@ -175,30 +149,8 @@ export default {
 
 <template>
   <Layout>
-    <!-- start page title -->
-    <div class="row align-items-center">
-      <div class="col-sm-6">
-        <div class="page-title-box">
-          <h4 class="font-size-18">Dashboard</h4>
-        </div>
-      </div>
+    <PageHeader :title="title" :items="items" />
 
-      <!-- <div class="col-sm-6">
-        <div class="float-right d-none d-md-block">
-          <b-dropdown right variant="primary">
-            <template v-slot:button-content>
-              <i class="mdi mdi-settings mr-2"></i> Settings
-            </template>
-            <a class="dropdown-item" href="javascript: void(0);">Action</a>
-            <a class="dropdown-item" href="javascript: void(0);">Another action</a>
-            <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
-          </b-dropdown>
-        </div>
-      </div> -->
-    </div>
-    <!-- end page title -->
     <div class="row">
       <div class="col-xl-3 col-md-6" v-for="stat of statData" :key="stat.icon">
         <Stat
@@ -473,7 +425,6 @@ export default {
         </div>
       </div>
       <div class="col-xl-4">
-        <Chat :chat-messages="chatMessages" />
       </div>
     </div>
     <!-- end row -->

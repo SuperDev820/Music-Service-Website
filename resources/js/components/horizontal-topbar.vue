@@ -303,7 +303,7 @@ export default {
             />
           </template>
           <router-link tag="a" class="dropdown-item" to="">
-            <i class="mdi mdi-sign-direction font-size-17 align-middle mr-1"></i> Sign In
+            <i class="mdi mdi-sign-direction font-size-17 align-middle mr-1"></i> Log In
           </router-link>
         </b-dropdown>
 
