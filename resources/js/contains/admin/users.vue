@@ -3,7 +3,6 @@
 	import appConfig from "@/app.config";
   import PageHeader from "@/components/page-header";
 
-  import { tableData } from "./data-advancedtable";
   import {mapActions, mapGetters} from 'vuex';
 
 	export default {
@@ -17,7 +16,6 @@
     },
     data() {
       return {
-        tableData: tableData,
         title: "Users",
         items: [
           {
@@ -46,11 +44,14 @@
       }
     },
     computed: {
+      ...mapGetters([
+        'getUsers'
+      ]),
       /**
        * Total no. of records
        */
       rows() {
-        return this.tableData.length;
+        return this.getUsers.length;
       }
     },
     mounted() {
@@ -111,7 +112,7 @@
             <!-- Table -->
             <div class="table-responsive mb-0">
               <b-table
-                :items="tableData"
+                :items="getUsers"
                 :fields="fields"
                 responsive="sm"
                 :per-page="perPage"

@@ -1,9 +1,9 @@
 const getters = {
-    getCourses(state) {
-        return state.courses;
+    getUsers(state) {
+        return state.users;
     },
-    getCourse(state) {
-        return state.course;
+    getUser(state) {
+        return state.user;
     },
   };
   
