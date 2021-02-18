@@ -6,8 +6,9 @@ const actions = {
     initUsers(context) {
         ApiService.setHeader();
         return new Promise((resolve) =>{
-            ApiService.get("api/v1/users")
+            ApiService.get("api/v1/admin/users")
                 .then(({data}) => {
+                    console.log(data);
                     context.commit(type.SET_ALL_USERS, data)
                 })
                 .catch(({ response }) => {
@@ -18,7 +19,7 @@ const actions = {
     getUserById(context, userId) {
         ApiService.setHeader();
         return new Promise((resolve) =>{
-            ApiService.get("api/v1/user/" + userId)
+            ApiService.get("api/v1/admin/user/" + userId)
                 .then(({data}) => {
                     console.log(data);
                     context.commit(type.SET_USER, data)

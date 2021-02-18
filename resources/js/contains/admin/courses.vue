@@ -1,13 +1,13 @@
 <script>
-	import Layout from "./subcomponent/layout";
-	import appConfig from "@/app.config";
+  import Layout from "./subcomponent/layout";
+  import appConfig from "@/app.config";
   import PageHeader from "@/components/page-header";
 
   import {mapActions, mapGetters} from 'vuex';
 
-	export default {
-		page: {
-        title: "Users",
+  export default {
+    page: {
+        title: "Courses",
         meta: [{ name: "description", content: appConfig.description }]
     },
     components: {
@@ -16,14 +16,14 @@
     },
     data() {
       return {
-        title: "Users",
+        title: "Courses",
         items: [
           {
             text: "AudioTriki",
             href: "/"
           },
           {
-            text: "Users",
+            text: "Courses",
             active: true
           }
         ],
@@ -33,35 +33,32 @@
         pageOptions: [10, 25, 50, 100],
         filter: null,
         filterOn: [],
-        sortBy: "name",
+        sortBy: "title",
         sortDesc: false,
         fields: [
-          { key: "name", sortable: true },
-          { key: "email", sortable: true },
-          { key: "date", sortable: true },
+          { key: "title", sortable: true },
+          { key: "rate", sortable: false },
+          { key: "detail", sortable: false },
+          { key: "category", sortable: false },
+          { key: "genre", sortable: false },
+          { key: "tutor", sortable: false },
           { key: "action", sortable: false }
         ]
       }
     },
     computed: {
       ...mapGetters([
-        'getUsers'
+        'getCourses'
       ]),
-      /**
-       * Total no. of records
-       */
-      rows() {
-        return this.getUsers.length;
-      }
     },
     mounted() {
       // Set the initial number of items
       // this.totalRows = this.items.length;
-      this.initUsers();
+      this.initCourses();
     },
     methods: {
       ...mapActions([
-        'initUsers'
+        'initCourses'
       ]),
       /**
        * Search the table data with search input
@@ -72,7 +69,7 @@
         this.currentPage = 1;
       }
     }
-	};
+  };
 </script>
 <template>
   <Layout>
@@ -83,7 +80,7 @@
           class="btn btn-info btn-block d-inline-block"
           target="_blank"
         >
-          <i class="fas fa-plus mr-1"></i> ADD USER
+          <i class="fas fa-plus mr-1"></i> ADD COURSE
         </a>
       </div>
     </PageHeader>
@@ -92,7 +89,7 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">User Table</h4>
+            <h4 class="card-title">Course Table</h4>
             <p class="card-title-desc"></p>
             <div class="row mb-md-2">
               <div class="col-sm-12 col-md-6">

@@ -113,4 +113,12 @@ export default [
         //     authRequired: true,
         // },
     },
+    {
+        path: '/admin/courses',
+        name: 'Courses',
+        component: () => import('../contains/admin/courses'),
+        // meta: {
+        //     authRequired: true,
+        // },
+    },
 ]

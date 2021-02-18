@@ -48,7 +48,7 @@ Route::group([ 'prefix' => 'v1', 'middleware' => 'api'], function(){
         // Route::delete('{courseId}', 'App\Http\Controllers\Api\v1\CourseController@delete');
     });
 
-    Route::group([ 'prefix' => 'admin' ], function(){
+    Route::group([ 'prefix' => 'admin', 'middleware' => 'admin' ], function(){
         /* Get all course details*/
         Route::get('/users', 'App\Http\Controllers\Api\v1\UserController@getAll');
         /* Get course detail by id */

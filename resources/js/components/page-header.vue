@@ -30,8 +30,9 @@ export default {
         </div>
       </div>
     </div>
-    <!-- <div class="col-sm-6">
-      <div class="float-right d-none d-md-block">
+    <div class="col-sm-6">
+      <slot />
+      <!-- <div class="float-right d-none d-md-block">
         <b-dropdown right variant="primary">
           <template v-slot:button-content>
             <i class="mdi mdi-settings mr-2"></i> Settings
@@ -42,8 +43,8 @@ export default {
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
         </b-dropdown>
-      </div>
-    </div> -->
+      </div> -->
+    </div>
   </div>
   <!-- end page title -->
 </template>

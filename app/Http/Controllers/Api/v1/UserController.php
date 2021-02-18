@@ -14,7 +14,7 @@ class userController extends Controller
      * @return void
      */
     public function __construct() {
-        $this->middleware('auth:api', ['except' => []]);
+        $this->middleware('auth:admin', ['except' => []]);
     }
     /**
      * Response all data
