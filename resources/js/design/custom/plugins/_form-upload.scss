@@ -14,7 +14,7 @@
   .dz-message {
     font-size: 24px;
     color: $gray-400;
-    margin: 3em 0 !important;
+    margin: 2em 0 !important;
   }
 }
 
@@ -27,4 +27,8 @@
 .vue-dropzone>.dz-preview .dz-image {
   height: 120px !important;
   width: 120px !important;
+}
+
+.vue-dropzone>.dz-preview .dz-remove {
+  margin-left: 0 !important;
 }

@@ -107,10 +107,14 @@ __webpack_require__.r(__webpack_exports__);
       }]
     };
   },
-  computed: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapGetters)(['getCourses'])),
+  computed: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)((0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapGetters)(['getCourses'])), {}, {
+    rows: function rows() {
+      return this.getCourses.length;
+    }
+  }),
   mounted: function mounted() {
     // Set the initial number of items
-    // this.totalRows = this.items.length;
+    this.totalRows = this.getCourses.length;
     this.initCourses();
   },
   methods: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)((0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapActions)(['initCourses'])), {}, {
@@ -7225,19 +7229,24 @@ var render = function() {
     "Layout",
     [
       _c("PageHeader", { attrs: { title: _vm.title, items: _vm.items } }, [
-        _c("div", { staticClass: "float-right" }, [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-info btn-block d-inline-block",
-              attrs: { href: "/admin/user/create", target: "_blank" }
-            },
-            [
-              _c("i", { staticClass: "fas fa-plus mr-1" }),
-              _vm._v(" ADD COURSE\n      ")
-            ]
-          )
-        ])
+        _c(
+          "div",
+          { staticClass: "float-right" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-info btn-block d-inline-block",
+                attrs: { to: "/admin/course/create" }
+              },
+              [
+                _c("i", { staticClass: "fas fa-plus mr-1" }),
+                _vm._v(" ADD COURSE\n      ")
+              ]
+            )
+          ],
+          1
+        )
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
@@ -7322,7 +7331,7 @@ var render = function() {
                 [
                   _c("b-table", {
                     attrs: {
-                      items: _vm.getUsers,
+                      items: _vm.getCourses,
                       fields: _vm.fields,
                       responsive: "sm",
                       "per-page": _vm.perPage,

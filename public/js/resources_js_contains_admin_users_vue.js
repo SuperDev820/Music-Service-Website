@@ -7570,19 +7570,24 @@ var render = function() {
     "Layout",
     [
       _c("PageHeader", { attrs: { title: _vm.title, items: _vm.items } }, [
-        _c("div", { staticClass: "float-right" }, [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-info btn-block d-inline-block",
-              attrs: { href: "/admin/user/create", target: "_blank" }
-            },
-            [
-              _c("i", { staticClass: "fas fa-plus mr-1" }),
-              _vm._v(" ADD USER\n      ")
-            ]
-          )
-        ])
+        _c(
+          "div",
+          { staticClass: "float-right" },
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-info btn-block d-inline-block",
+                attrs: { to: "/admin/user/create" }
+              },
+              [
+                _c("i", { staticClass: "fas fa-plus mr-1" }),
+                _vm._v(" ADD USER\n      ")
+              ]
+            )
+          ],
+          1
+        )
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [

@@ -59,6 +59,17 @@ Route::group([ 'prefix' => 'v1', 'middleware' => 'api'], function(){
         // Route::put('{courseId}', 'App\Http\Controllers\Api\v1\CourseController@update');
         // /* Delete course by id */
         // Route::delete('{courseId}', 'App\Http\Controllers\Api\v1\CourseController@delete');
+
+        /* Get all course details*/
+        Route::get('/courses', 'App\Http\Controllers\Api\v1\CourseController@getAll');
+        /* Get course detail by id */
+        Route::get('/course/{courseId}', 'App\Http\Controllers\Api\v1\CourseController@getById');
+        // /* Add a course */
+        // Route::post('/', 'App\Http\Controllers\Api\v1\CourseController@create');
+        // /* Update a course by id */
+        // Route::put('{courseId}', 'App\Http\Controllers\Api\v1\CourseController@update');
+        // /* Delete course by id */
+        // Route::delete('{courseId}', 'App\Http\Controllers\Api\v1\CourseController@delete');
     });
     Route::group(['middleware' => ['jwt.auth']], function() {
 

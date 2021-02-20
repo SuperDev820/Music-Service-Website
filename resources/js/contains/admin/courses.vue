@@ -50,10 +50,13 @@
       ...mapGetters([
         'getCourses'
       ]),
+      rows() {
+        return this.getCourses.length;
+      },
     },
     mounted() {
       // Set the initial number of items
-      // this.totalRows = this.items.length;
+      this.totalRows = this.getCourses.length;
       this.initCourses();
     },
     methods: {
@@ -75,13 +78,11 @@
   <Layout>
     <PageHeader :title="title" :items="items">
       <div class="float-right">
-        <a
-          href="/admin/user/create"
+        <router-link to="/admin/course/create"
           class="btn btn-info btn-block d-inline-block"
-          target="_blank"
         >
           <i class="fas fa-plus mr-1"></i> ADD COURSE
-        </a>
+        </router-link>
       </div>
     </PageHeader>
 
@@ -119,7 +120,7 @@
             <!-- Table -->
             <div class="table-responsive mb-0">
               <b-table
-                :items="getUsers"
+                :items="getCourses"
                 :fields="fields"
                 responsive="sm"
                 :per-page="perPage"

@@ -28,7 +28,20 @@ const actions = {
                     // context.commit(type.AUTH_LOGOUT);
                 });
         });
-    }
+    },
+    initCourses(context) {
+        ApiService.setHeader();
+        return new Promise((resolve) =>{
+            ApiService.get("api/v1/admin/courses")
+                .then(({data}) => {
+                    console.log(data);
+                    context.commit(type.SET_ALL_COURSES, data)
+                })
+                .catch(({ response }) => {
+                    // context.commit(type.AUTH_LOGOUT);
+                });
+        });
+    },
 };
 
 

@@ -78,13 +78,11 @@
   <Layout>
     <PageHeader :title="title" :items="items">
       <div class="float-right">
-        <a
-          href="/admin/user/create"
+        <router-link to="/admin/user/create"
           class="btn btn-info btn-block d-inline-block"
-          target="_blank"
         >
           <i class="fas fa-plus mr-1"></i> ADD USER
-        </a>
+        </router-link>
       </div>
     </PageHeader>
 

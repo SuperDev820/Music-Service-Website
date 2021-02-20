@@ -114,9 +114,25 @@ export default [
         // },
     },
     {
+        path: '/admin/user/create',
+        name: 'UserCreate',
+        component: () => import('../contains/admin/user-create'),
+        // meta: {
+        //     authRequired: true,
+        // },
+    },
+    {
         path: '/admin/courses',
         name: 'Courses',
         component: () => import('../contains/admin/courses'),
+        // meta: {
+        //     authRequired: true,
+        // },
+    },
+    {
+        path: '/admin/course/create',
+        name: 'CourseCreate',
+        component: () => import('../contains/admin/course-create'),
         // meta: {
         //     authRequired: true,
         // },
