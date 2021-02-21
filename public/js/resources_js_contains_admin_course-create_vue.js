@@ -81,15 +81,11 @@ __webpack_require__.r(__webpack_exports__);
         active: true
       }],
       typeform: {
-        name: "",
-        password: "",
-        confirmPassword: "",
-        email: "",
-        url: "",
-        digit: "",
-        number: "",
-        alphanum: "",
-        textarea: ""
+        title: "",
+        tutor: "",
+        description: "",
+        category: "0",
+        genre: "0"
       },
       typesubmit: false,
       dropzoneOptions: {
@@ -105,39 +101,15 @@ __webpack_require__.r(__webpack_exports__);
   },
   validations: {
     typeform: {
-      name: {
+      title: {
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
       },
-      password: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required,
-        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.minLength)(6)
-      },
-      confirmPassword: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required,
-        sameAsPassword: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.sameAs)("password")
-      },
-      email: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required,
-        email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.email
-      },
-      url: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required,
-        url: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.url
-      },
-      digit: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required,
-        numeric: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.numeric
-      },
-      number: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required,
-        numeric: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.numeric
-      },
-      alphanum: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required,
-        alphaNum: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.alphaNum
-      },
-      textarea: {
+      tutor: {
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required
+      },
+      description: {
+        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.required,
+        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_6__.minLength)(20)
       }
     }
   },
@@ -7272,45 +7244,245 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("Required")]),
+                    _c("label", [_vm._v("Title")]),
                     _vm._v(" "),
                     _c("input", {
                       directives: [
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.typeform.name,
-                          expression: "typeform.name"
+                          value: _vm.typeform.title,
+                          expression: "typeform.title"
                         }
                       ],
                       staticClass: "form-control",
                       class: {
                         "is-invalid":
-                          _vm.typesubmit && _vm.$v.typeform.name.$error
+                          _vm.typesubmit && _vm.$v.typeform.title.$error
                       },
                       attrs: {
                         type: "text",
-                        placeholder: "Type something",
-                        name: "name"
+                        placeholder: "Course Title",
+                        name: "title"
                       },
-                      domProps: { value: _vm.typeform.name },
+                      domProps: { value: _vm.typeform.title },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
                             return
                           }
-                          _vm.$set(_vm.typeform, "name", $event.target.value)
+                          _vm.$set(_vm.typeform, "title", $event.target.value)
                         }
                       }
                     }),
                     _vm._v(" "),
-                    _vm.typesubmit && _vm.$v.typeform.name.$error
+                    _vm.typesubmit && _vm.$v.typeform.title.$error
                       ? _c("div", { staticClass: "invalid-feedback" }, [
-                          !_vm.$v.typeform.name.required
+                          !_vm.$v.typeform.title.required
                             ? _c("span", [_vm._v("This value is required.")])
                             : _vm._e()
                         ])
                       : _vm._e()
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", [_vm._v("Category")]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.typeform.category,
+                              expression: "typeform.category"
+                            }
+                          ],
+                          staticClass: "custom-select",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.typeform,
+                                "category",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "0", hidden: "" } }, [
+                            _vm._v("Open this select menu")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("HOW TO USE")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("HOW TO MAKE")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", [_vm._v("Genre")]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.typeform.genre,
+                              expression: "typeform.genre"
+                            }
+                          ],
+                          staticClass: "custom-select",
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.$set(
+                                _vm.typeform,
+                                "genre",
+                                $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "0", hidden: "" } }, [
+                            _vm._v("Open this select menu")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "1" } }, [
+                            _vm._v("DEEP HOUSE")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "2" } }, [
+                            _vm._v("DEEP TECH HOUSE")
+                          ])
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", [_vm._v("Tutor")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.typeform.tutor,
+                          expression: "typeform.tutor"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      class: {
+                        "is-invalid":
+                          _vm.typesubmit && _vm.$v.typeform.tutor.$error
+                      },
+                      attrs: {
+                        type: "text",
+                        placeholder: "Course Tutor",
+                        name: "tutor"
+                      },
+                      domProps: { value: _vm.typeform.tutor },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.typeform, "tutor", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm.typesubmit && _vm.$v.typeform.tutor.$error
+                      ? _c("div", { staticClass: "invalid-feedback" }, [
+                          !_vm.$v.typeform.tutor.required
+                            ? _c("span", [_vm._v("This value is required.")])
+                            : _vm._e()
+                        ])
+                      : _vm._e()
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", [_vm._v("Description")]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("textarea", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.typeform.description,
+                            expression: "typeform.description"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        class: {
+                          "is-invalid":
+                            _vm.typesubmit && _vm.$v.typeform.description.$error
+                        },
+                        attrs: { name: "description" },
+                        domProps: { value: _vm.typeform.description },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.typeform,
+                              "description",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _vm.typesubmit && _vm.$v.typeform.description.$error
+                        ? _c("div", { staticClass: "invalid-feedback" }, [
+                            !_vm.$v.typeform.description.required
+                              ? _c("span", [_vm._v("This value is required.")])
+                              : _vm._e(),
+                            _vm._v(" "),
+                            !_vm.$v.typeform.description.minLength
+                              ? _c("span", [
+                                  _vm._v(
+                                    "This value is too short. It should have 20 characters or more."
+                                  )
+                                ])
+                              : _vm._e()
+                          ])
+                        : _vm._e()
+                    ])
                   ]),
                   _vm._v(" "),
                   _c(
@@ -7326,25 +7498,38 @@ var render = function() {
                   ),
                   _vm._v(" "),
                   _c("div", { staticClass: "form-group mb-0" }, [
-                    _c("div", [
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-primary",
-                          attrs: { type: "submit" }
-                        },
-                        [_vm._v("Submit")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-secondary m-l-5 ml-1",
-                          attrs: { type: "reset" }
-                        },
-                        [_vm._v("Cancel")]
-                      )
-                    ])
+                    _c(
+                      "div",
+                      [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-primary",
+                            attrs: { type: "submit" }
+                          },
+                          [_vm._v("Submit")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "btn btn-secondary m-l-5 ml-1",
+                            attrs: { to: "/admin/courses" }
+                          },
+                          [_vm._v("Cancel")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-warning m-l-5 ml-1",
+                            attrs: { type: "reset" }
+                          },
+                          [_vm._v("Reset")]
+                        )
+                      ],
+                      1
+                    )
                   ])
                 ]
               )

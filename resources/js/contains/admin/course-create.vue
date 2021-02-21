@@ -42,15 +42,11 @@ export default {
         }
       ],
       typeform: {
-        name: "",
-        password: "",
-        confirmPassword: "",
-        email: "",
-        url: "",
-        digit: "",
-        number: "",
-        alphanum: "",
-        textarea: ""
+        title: "",
+        tutor: "",
+        description: "",
+        category: "0",
+        genre: "0",
       },
       typesubmit: false,
       dropzoneOptions: {
@@ -64,15 +60,9 @@ export default {
   },
   validations: {
     typeform: {
-      name: { required },
-      password: { required, minLength: minLength(6) },
-      confirmPassword: { required, sameAsPassword: sameAs("password") },
-      email: { required, email },
-      url: { required, url },
-      digit: { required, numeric },
-      number: { required, numeric },
-      alphanum: { required, alphaNum },
-      textarea: { required }
+      title: { required },
+      tutor: { required },
+      description: { required, minLength: minLength(20) },
     }
   },
   methods: {
@@ -99,17 +89,72 @@ export default {
           <div class="card-body">
             <form action="#" @submit.prevent="typeForm">
               <div class="form-group">
-                <label>Required</label>
+                <label>Title</label>
                 <input
-                  v-model="typeform.name"
+                  v-model="typeform.title"
                   type="text"
                   class="form-control"
-                  placeholder="Type something"
-                  name="name"
-                  :class="{ 'is-invalid': typesubmit && $v.typeform.name.$error }"
+                  placeholder="Course Title"
+                  name="title"
+                  :class="{ 'is-invalid': typesubmit && $v.typeform.title.$error }"
                 />
-                <div v-if="typesubmit && $v.typeform.name.$error" class="invalid-feedback">
-                  <span v-if="!$v.typeform.name.required">This value is required.</span>
+                <div v-if="typesubmit && $v.typeform.title.$error" class="invalid-feedback">
+                  <span v-if="!$v.typeform.title.required">This value is required.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Category</label>
+                <div>
+                  <select class="custom-select" v-model="typeform.category">
+                    <option value="0" hidden>Open this select menu</option>
+                    <option value="1">HOW TO USE</option>
+                    <option value="2">HOW TO MAKE</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Genre</label>
+                <div>
+                  <select class="custom-select" v-model="typeform.genre">
+                    <option value="0" hidden>Open this select menu</option>
+                    <option value="1">DEEP HOUSE</option>
+                    <option value="2">DEEP TECH HOUSE</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Tutor</label>
+                <input
+                  v-model="typeform.tutor"
+                  type="text"
+                  class="form-control"
+                  placeholder="Course Tutor"
+                  name="tutor"
+                  :class="{ 'is-invalid': typesubmit && $v.typeform.tutor.$error }"
+                />
+                <div v-if="typesubmit && $v.typeform.tutor.$error" class="invalid-feedback">
+                  <span v-if="!$v.typeform.tutor.required">This value is required.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Description</label>
+                <div>
+                  <textarea
+                    v-model="typeform.description"
+                    class="form-control"
+                    name="description"
+                    :class="{ 'is-invalid': typesubmit && $v.typeform.description.$error }"
+                  ></textarea>
+                  <div v-if="typesubmit && $v.typeform.description.$error" class="invalid-feedback">
+                    <span v-if="!$v.typeform.description.required">This value is required.</span>
+                    <span
+                      v-if="!$v.typeform.description.minLength"
+                    >This value is too short. It should have 20 characters or more.</span>
+                  </div>
                 </div>
               </div>
               <div class="mb-5">
@@ -119,7 +164,8 @@ export default {
               <div class="form-group mb-0">
                 <div>
                   <button type="submit" class="btn btn-primary">Submit</button>
-                  <button type="reset" class="btn btn-secondary m-l-5 ml-1">Cancel</button>
+                  <router-link to="/admin/courses" class="btn btn-secondary m-l-5 ml-1">Cancel</router-link>
+                  <button type="reset" class="btn btn-warning m-l-5 ml-1">Reset</button>
                 </div>
               </div>
             </form>
