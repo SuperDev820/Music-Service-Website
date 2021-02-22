@@ -151,23 +151,16 @@ export default {
               alt="Header Avatar"
             />
           </template>
-          <a class="dropdown-item" href="#">
+          <router-link class="dropdown-item" to="#">
             <i class="mdi mdi-account-circle font-size-17 align-middle mr-1"></i> Profile
-          </a>
-          <a class="dropdown-item" href="#">
+          </router-link>
+          <router-link class="dropdown-item" to="#">
             <i class="mdi mdi-wallet font-size-17 align-middle mr-1"></i> My Wallet
-          </a>
-          <!-- <a class="dropdown-item d-block" href="#">
-            <span class="badge badge-success float-right">11</span>
-            <i class="mdi mdi-settings font-size-17 align-middle mr-1"></i> Settings
-          </a>
-          <a class="dropdown-item" href="#">
-            <i class="mdi mdi-lock-open-outline font-size-17 align-middle mr-1"></i> Lock screen
-          </a> -->
+          </router-link>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-danger" href="/logout">
+          <router-link class="dropdown-item text-danger" to="/logout">
             <i class="bx bx-power-off font-size-17 align-middle mr-1 text-danger"></i> Logout
-          </a>
+          </router-link>
         </b-dropdown>
 
       </div>

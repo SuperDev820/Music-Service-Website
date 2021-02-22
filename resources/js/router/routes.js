@@ -122,6 +122,15 @@ export default [
         // },
     },
     {
+        path: '/admin/user/edit',
+        name: 'UserEdit',
+        component: () => import('../contains/admin/user-edit'),
+        // meta: {
+        //     authRequired: true,
+        // },
+    },
+
+    {
         path: '/admin/courses',
         name: 'Courses',
         component: () => import('../contains/admin/courses'),
@@ -133,6 +142,14 @@ export default [
         path: '/admin/course/create',
         name: 'CourseCreate',
         component: () => import('../contains/admin/course-create'),
+        // meta: {
+        //     authRequired: true,
+        // },
+    },
+    {
+        path: '/admin/course/edit',
+        name: 'CourseEdit',
+        component: () => import('../contains/admin/course-edit'),
         // meta: {
         //     authRequired: true,
         // },

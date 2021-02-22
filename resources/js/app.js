@@ -26,7 +26,11 @@ import store from './store'
 import vco from "v-click-outside"
 import "./design/index.scss";
 import Sparkline from 'vue-sparklines';
+import ReadMore from 'vue-read-more';
+var VueTruncate = require('vue-truncate-filter')
+Vue.use(VueTruncate)
 
+Vue.use(ReadMore);
 Vue.use(BootstrapVue);
 
 Vue.config.productionTip = false

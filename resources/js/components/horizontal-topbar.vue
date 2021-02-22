@@ -266,13 +266,13 @@ export default {
           </div>
         </b-dropdown> -->
 
-        <a
-          href="/"
+        <router-link
+          to="/"
           class="btn btn-info btn-block my-3 d-inline-block"
           target="_blank"
         >
           Your Basket <i class="mdi mdi-cart mr-1"></i> £0.00
-        </a>
+        </router-link>
 
         <b-dropdown class="d-inline-block" right toggle-class="header-item" variant="white" v-if="isAuthenticated === true">
           <template v-slot:button-content>
@@ -282,16 +282,16 @@ export default {
               alt="Header Avatar"
             />
           </template>
-          <a class="dropdown-item" href="#">
+          <router-link class="dropdown-item" to="#">
             <i class="mdi mdi-account-circle font-size-17 align-middle mr-1"></i> Profile
-          </a>
-          <a class="dropdown-item" href="#">
+          </router-link>
+          <router-link class="dropdown-item" to="#">
             <i class="mdi mdi-wallet font-size-17 align-middle mr-1"></i> My Wallet
-          </a>
+          </router-link>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item text-danger" href="javascript:;">
+          <router-link class="dropdown-item text-danger" to="/logout">
             <i class="bx bx-power-off font-size-17 align-middle mr-1 text-danger"></i> Logout
-          </a>
+          </router-link>
         </b-dropdown>
 
         <b-dropdown class="d-inline-block" right toggle-class="header-item" variant="white" v-else>
@@ -302,7 +302,7 @@ export default {
               alt="Header Avatar"
             />
           </template>
-          <router-link tag="a" class="dropdown-item" to="">
+          <router-link tag="a" class="dropdown-item" to="/login">
             <i class="mdi mdi-sign-direction font-size-17 align-middle mr-1"></i> Log In
           </router-link>
         </b-dropdown>

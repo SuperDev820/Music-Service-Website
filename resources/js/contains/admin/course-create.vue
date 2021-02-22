@@ -108,8 +108,8 @@ export default {
                 <div>
                   <select class="custom-select" v-model="typeform.category">
                     <option value="0" hidden>Open this select menu</option>
-                    <option value="1">HOW TO USE</option>
-                    <option value="2">HOW TO MAKE</option>
+                    <option value="HOW TO USE">HOW TO USE</option>
+                    <option value="HOW TO MAKE">HOW TO MAKE</option>
                   </select>
                 </div>
               </div>
@@ -119,8 +119,8 @@ export default {
                 <div>
                   <select class="custom-select" v-model="typeform.genre">
                     <option value="0" hidden>Open this select menu</option>
-                    <option value="1">DEEP HOUSE</option>
-                    <option value="2">DEEP TECH HOUSE</option>
+                    <option value="DEEP HOUSE">DEEP HOUSE</option>
+                    <option value="DEEP TECH HOUSE">DEEP TECH HOUSE</option>
                   </select>
                 </div>
               </div>
@@ -147,6 +147,7 @@ export default {
                     v-model="typeform.description"
                     class="form-control"
                     name="description"
+                    :style="{ 'min-height': '100px' }"
                     :class="{ 'is-invalid': typesubmit && $v.typeform.description.$error }"
                   ></textarea>
                   <div v-if="typesubmit && $v.typeform.description.$error" class="invalid-feedback">

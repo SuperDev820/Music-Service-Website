@@ -13,7 +13,7 @@
     },
     components: {
       Layout,
-      PageHeader
+      PageHeader,
     },
     data() {
       return {
@@ -133,10 +133,16 @@
                 :filter-included-fields="filterOn"
                 @filtered="onFiltered"
               >
+                <template #cell(detail)="row">
+                  <div>{{ row.value | truncate(50) }}</div>
+                </template>
                 <template #cell(actions)="row">
-                  <b-button size="sm" class="mr-2">
+                  <!-- <b-button size="sm" class="mr-2">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                  </b-button> -->
+                  <router-link to="/admin/course/edit" class="btn btn-sm btn-secondary mr-2">
                     <i class="far fa-edit"></i>
-                  </b-button>
+                  </router-link>
                   <b-button size="sm">
                     <i class="fas fa-trash"></i>
                   </b-button>

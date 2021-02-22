@@ -134,9 +134,9 @@
                 @filtered="onFiltered"
               >
                 <template #cell(actions)="row">
-                  <b-button size="sm" class="mr-2">
+                  <router-link to="/admin/user/edit" class="btn btn-sm btn-secondary mr-2">
                     <i class="far fa-edit"></i>
-                  </b-button>
+                  </router-link>
                   <b-button size="sm">
                     <i class="fas fa-trash"></i>
                   </b-button>
