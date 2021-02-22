@@ -107,4 +107,23 @@ const radialBarChart = {
     }
 };
 
-export { sparklineChartData, salesDonutChart, radialBarChart }
+const userData = [
+    {
+        name: "www",
+        email: "www@mail.ru",
+        date: "2021-01-15 01:17:23",
+    }
+];
+
+const courseData = [
+    {
+        title: "Novation AFX Station Review with King Unique",
+        rate: 0.99,
+        detail: "We got our hands on the Novation AFX Station this week and of course King Unique was the obvious choice to dive into everything this Aphex Twin remixed monosynth has to offer!",
+        category: "HOW TO USE",
+        genre: "DEEP HOUSE",
+        tutor: "",
+    }
+];
+
+export { sparklineChartData, salesDonutChart, radialBarChart, userData, courseData }

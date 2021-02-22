@@ -4,6 +4,7 @@
   import PageHeader from "@/components/page-header";
 
   import {mapActions, mapGetters} from 'vuex';
+  import { userData } from "./data";
 
 	export default {
 		page: {
@@ -27,6 +28,7 @@
             active: true
           }
         ],
+        tableData: userData,
         totalRows: 1,
         currentPage: 1,
         perPage: 10,
@@ -39,7 +41,7 @@
           { key: "name", sortable: true },
           { key: "email", sortable: true },
           { key: "date", sortable: true },
-          { key: "action", sortable: false }
+          { key: "actions", sortable: false }
         ]
       }
     },
@@ -120,7 +122,7 @@
             <!-- Table -->
             <div class="table-responsive mb-0">
               <b-table
-                :items="getUsers"
+                :items="tableData"
                 :fields="fields"
                 responsive="sm"
                 :per-page="perPage"
@@ -130,7 +132,16 @@
                 :filter="filter"
                 :filter-included-fields="filterOn"
                 @filtered="onFiltered"
-              ></b-table>
+              >
+                <template #cell(actions)="row">
+                  <b-button size="sm" class="mr-2">
+                    <i class="far fa-edit"></i>
+                  </b-button>
+                  <b-button size="sm">
+                    <i class="fas fa-trash"></i>
+                  </b-button>
+                </template>
+              </b-table>
             </div>
             <div class="row">
               <div class="col">
