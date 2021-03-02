@@ -3,7 +3,7 @@ import Layout from "./subcomponent/layout";
 import PageHeader from "@/components/page-header";
 import appConfig from "@/app.config";
 
-import { userData } from "./data";
+import { mapActions, mapGetters } from 'vuex';
 
 import {
   required,
@@ -41,11 +41,13 @@ export default {
           active: true
         }
       ],
+      isError: false,
+      Error: null,
       typeform: {
-        name: userData[0].name,
+        name: "",
+        email: "",
         password: "",
         confirmPassword: "",
-        email: userData[0].email,
       },
       typesubmit: false,
     };
@@ -53,20 +55,55 @@ export default {
   validations: {
     typeform: {
       name: { required },
-      password: { required, minLength: minLength(6) },
-      confirmPassword: { required, sameAsPassword: sameAs("password") },
+      password: {},
+      confirmPassword: { sameAsPassword: sameAs("password") },
       email: { required, email },
     }
   },
+  mounted() {
+    this.getUserById(this.$route.params.userId);
+  },
+  computed: {
+    ...mapGetters([
+      'getUser'
+    ]),
+  },
   methods: {
+    ...mapActions([
+      'getUserById',
+      'updateUser'
+    ]),
     /**
      * Validation type submit
      */
     // eslint-disable-next-line no-unused-vars
     typeForm(e) {
       this.typesubmit = true;
+      this.isError = false;
+      this.Error = null;
       // stop here if form is invalid
       this.$v.$touch();
+      if (this.$v.typeform.name.$error || this.$v.typeform.email.$error || this.$v.typeform.confirmPassword.$error) {
+        return ;
+      }
+      return (
+        this.updateUser({
+            id: this.getUser.id,
+            name: this.typeform.name,
+            email: this.typeform.email,
+            password: this.typeform.password,
+            password_confirmation: this.typeform.confirmPassword
+          })
+          .then((res) => {
+            this.$router.push({name: "Users"});
+            this.typesubmit = false;
+          })
+          .catch(error => {
+            this.typesubmit = false;
+            this.Error = error ? error : "";
+            this.isError = true;
+          })
+      );
     }
   }
 };
@@ -80,11 +117,17 @@ export default {
       <div class="col-12">
         <div class="card">
           <div class="card-body">
+            <b-alert
+              v-model="isError"
+              variant="danger"
+              class="mt-3"
+              dismissible
+            >{{ Error }}</b-alert>
             <form action="#" @submit.prevent="typeForm">
               <div class="form-group">
                 <label>Name</label>
                 <input
-                  v-model="typeform.name"
+                  v-model="typeform.name=getUser.name"
                   type="text"
                   class="form-control"
                   placeholder="Name"
@@ -100,7 +143,7 @@ export default {
                 <label>E-Mail</label>
                 <div>
                   <input
-                    v-model="typeform.email"
+                    v-model="typeform.email=getUser.email"
                     type="email"
                     name="email"
                     class="form-control"

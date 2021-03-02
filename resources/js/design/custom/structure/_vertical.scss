@@ -209,7 +209,7 @@
     .vertical-menu {
         position: absolute;
         width: $sidebar-collapsed-width !important;
-        z-index: 1001;
+        z-index: 5;
 
         .simplebar-mask,
         .simplebar-content-wrapper {

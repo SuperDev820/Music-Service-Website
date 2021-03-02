@@ -12,6 +12,6 @@ export default new Vuex.Store({
     auth: authModule,
     layout: layoutModule,
     course: courseModule,
-    admin: adminModule
+    admin: adminModule,
   },
 });

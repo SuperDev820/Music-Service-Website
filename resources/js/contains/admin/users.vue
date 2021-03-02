@@ -3,8 +3,7 @@
 	import appConfig from "@/app.config";
   import PageHeader from "@/components/page-header";
 
-  import {mapActions, mapGetters} from 'vuex';
-  import { userData } from "./data";
+  import { mapActions, mapGetters } from 'vuex';
 
 	export default {
 		page: {
@@ -28,7 +27,6 @@
             active: true
           }
         ],
-        tableData: userData,
         totalRows: 1,
         currentPage: 1,
         perPage: 10,
@@ -39,8 +37,8 @@
         sortDesc: false,
         fields: [
           { key: "name", sortable: true },
-          { key: "email", sortable: true },
-          { key: "date", sortable: true },
+          { key: "email", sortable: false },
+          { key: "created_at", sortable: true },
           { key: "actions", sortable: false }
         ]
       }
@@ -58,12 +56,13 @@
     },
     mounted() {
       // Set the initial number of items
-      // this.totalRows = this.items.length;
+      this.totalRows = this.getUsers.length;
       this.initUsers();
     },
     methods: {
       ...mapActions([
-        'initUsers'
+        'initUsers',
+        'deleteUser',
       ]),
       /**
        * Search the table data with search input
@@ -122,7 +121,7 @@
             <!-- Table -->
             <div class="table-responsive mb-0">
               <b-table
-                :items="tableData"
+                :items="getUsers"
                 :fields="fields"
                 responsive="sm"
                 :per-page="perPage"
@@ -134,10 +133,10 @@
                 @filtered="onFiltered"
               >
                 <template #cell(actions)="row">
-                  <router-link to="/admin/user/edit" class="btn btn-sm btn-secondary mr-2">
+                  <router-link :to="{ name: 'UserEdit', params: { userId: row.item.id }}" class="btn btn-sm btn-secondary mr-2">
                     <i class="far fa-edit"></i>
                   </router-link>
-                  <b-button size="sm">
+                  <b-button size="sm" @click="deleteUser(row.item.id)">
                     <i class="fas fa-trash"></i>
                   </b-button>
                 </template>

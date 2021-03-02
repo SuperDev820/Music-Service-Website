@@ -41,13 +41,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.description.js */ "./node_modules/core-js/modules/es.symbol.description.js");
 /* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
-/* harmony import */ var _subcomponent_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./subcomponent/layout */ "./resources/js/contains/admin/subcomponent/layout.vue");
-/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/app.config */ "./resources/js/app.config.json");
-/* harmony import */ var _components_page_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/page-header */ "./resources/js/components/page-header.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.mjs");
-/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./data */ "./resources/js/contains/admin/data.js");
-
+/* harmony import */ var _subcomponent_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./subcomponent/layout */ "./resources/js/contains/admin/subcomponent/layout.vue");
+/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/app.config */ "./resources/js/app.config.json");
+/* harmony import */ var _components_page_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/page-header */ "./resources/js/components/page-header.vue");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./data */ "./resources/js/contains/admin/data.js");
 
 
 
@@ -60,12 +57,12 @@ __webpack_require__.r(__webpack_exports__);
     title: "Courses",
     meta: [{
       name: "description",
-      content: _app_config__WEBPACK_IMPORTED_MODULE_4__.description
+      content: _app_config__WEBPACK_IMPORTED_MODULE_3__.description
     }]
   },
   components: {
-    Layout: _subcomponent_layout__WEBPACK_IMPORTED_MODULE_3__.default,
-    PageHeader: _components_page_header__WEBPACK_IMPORTED_MODULE_5__.default
+    Layout: _subcomponent_layout__WEBPACK_IMPORTED_MODULE_2__.default,
+    PageHeader: _components_page_header__WEBPACK_IMPORTED_MODULE_4__.default
   },
   data: function data() {
     return {
@@ -77,7 +74,7 @@ __webpack_require__.r(__webpack_exports__);
         text: "Courses",
         active: true
       }],
-      tableData: _data__WEBPACK_IMPORTED_MODULE_6__.courseData,
+      tableData: _data__WEBPACK_IMPORTED_MODULE_5__.courseData,
       totalRows: 1,
       currentPage: 1,
       perPage: 10,
@@ -110,17 +107,16 @@ __webpack_require__.r(__webpack_exports__);
       }]
     };
   },
-  computed: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)((0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_7__.mapGetters)(['getCourses'])), {}, {
+  computed: {
     rows: function rows() {
-      return this.getCourses.length;
+      return this.tableData.length;
     }
-  }),
+  },
   mounted: function mounted() {
     // Set the initial number of items
-    this.totalRows = this.getCourses.length;
-    this.initCourses();
+    this.totalRows = this.tableData.length;
   },
-  methods: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)((0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_7__.mapActions)(['initCourses'])), {}, {
+  methods: {
     /**
      * Search the table data with search input
      */
@@ -129,7 +125,7 @@ __webpack_require__.r(__webpack_exports__);
       this.totalRows = filteredItems.length;
       this.currentPage = 1;
     }
-  })
+  }
 });
 
 /***/ }),

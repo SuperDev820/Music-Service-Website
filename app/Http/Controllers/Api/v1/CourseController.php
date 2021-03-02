@@ -51,7 +51,7 @@ class CourseController extends Controller
         $course->tutor;
         $course->tutorials;
         return response()->json([
-            'message' => 'success',
+            'message' => 'success',    
             'course' => $course,
         ], 200);
     }

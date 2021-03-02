@@ -3,7 +3,7 @@
   import appConfig from "@/app.config";
   import PageHeader from "@/components/page-header";
 
-  import {mapActions, mapGetters} from 'vuex';
+  import { mapActions, mapGetters } from 'vuex';
   import { courseData } from "./data";
 
   export default {
@@ -49,22 +49,15 @@
       }
     },
     computed: {
-      ...mapGetters([
-        'getCourses'
-      ]),
       rows() {
-        return this.getCourses.length;
+        return this.tableData.length;
       },
     },
     mounted() {
       // Set the initial number of items
-      this.totalRows = this.getCourses.length;
-      this.initCourses();
+      this.totalRows = this.tableData.length;
     },
     methods: {
-      ...mapActions([
-        'initCourses'
-      ]),
       /**
        * Search the table data with search input
        */

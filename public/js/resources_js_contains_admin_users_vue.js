@@ -247,9 +247,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _subcomponent_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./subcomponent/layout */ "./resources/js/contains/admin/subcomponent/layout.vue");
 /* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/app.config */ "./resources/js/app.config.json");
 /* harmony import */ var _components_page_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/page-header */ "./resources/js/components/page-header.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.mjs");
-/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./data */ "./resources/js/contains/admin/data.js");
-
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.mjs");
 
 
 
@@ -279,7 +277,6 @@ __webpack_require__.r(__webpack_exports__);
         text: "Users",
         active: true
       }],
-      tableData: _data__WEBPACK_IMPORTED_MODULE_6__.userData,
       totalRows: 1,
       currentPage: 1,
       perPage: 10,
@@ -293,9 +290,9 @@ __webpack_require__.r(__webpack_exports__);
         sortable: true
       }, {
         key: "email",
-        sortable: true
+        sortable: false
       }, {
-        key: "date",
+        key: "created_at",
         sortable: true
       }, {
         key: "actions",
@@ -303,7 +300,7 @@ __webpack_require__.r(__webpack_exports__);
       }]
     };
   },
-  computed: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)((0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_7__.mapGetters)(['getUsers'])), {}, {
+  computed: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)((0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapGetters)(['getUsers'])), {}, {
     /**
      * Total no. of records
      */
@@ -313,10 +310,10 @@ __webpack_require__.r(__webpack_exports__);
   }),
   mounted: function mounted() {
     // Set the initial number of items
-    // this.totalRows = this.items.length;
+    this.totalRows = this.getUsers.length;
     this.initUsers();
   },
-  methods: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)((0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_7__.mapActions)(['initUsers'])), {}, {
+  methods: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)((0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_6__.mapActions)(['initUsers', 'deleteUser'])), {}, {
     /**
      * Search the table data with search input
      */
@@ -327,81 +324,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   })
 });
-
-/***/ }),
-
-/***/ "./resources/js/contains/admin/data.js":
-/*!*********************************************!*\
-  !*** ./resources/js/contains/admin/data.js ***!
-  \*********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "sparklineChartData": function() { return /* binding */ sparklineChartData; },
-/* harmony export */   "salesDonutChart": function() { return /* binding */ salesDonutChart; },
-/* harmony export */   "radialBarChart": function() { return /* binding */ radialBarChart; },
-/* harmony export */   "userData": function() { return /* binding */ userData; },
-/* harmony export */   "courseData": function() { return /* binding */ courseData; }
-/* harmony export */ });
-var sparklineChartData = {
-  sparkChart1: [6, 2, 8, 4, 3, 8, 1, 3, 6, 5, 9, 2, 8, 1, 4, 8, 9, 8, 2, 1],
-  sparkChart2: [6, 2, 8, 4, -3, 8, 1, -3, 6, -5, 9, 2, -8, 1, 4, 8, 9, 8, 2, 1],
-  sparkChart3: [6, 2, 8, 4, 3, 8, 1, 3, 6, 5, 9, 2, 8, 1, 4, 8, 9, 8, 2, 1],
-  reflineStyle: {
-    strokeOpacity: 1,
-    strokeDasharray: "3, 3"
-  },
-  style: {
-    stroke: "#02a499",
-    fill: "#02a499"
-  }
-};
-var salesDonutChart = {
-  data: {
-    series: [54, 28, 17],
-    labels: [1, 2, 3]
-  },
-  options: {
-    donut: true,
-    showLabel: false
-  }
-};
-var radialBarChart = {
-  chartOptions: {
-    plotOptions: {
-      radialBar: {
-        hollow: {
-          size: "45%"
-        },
-        dataLabels: {
-          value: {
-            show: false
-          },
-          name: {
-            show: false
-          }
-        }
-      }
-    },
-    colors: ["#02a499"]
-  }
-};
-var userData = [{
-  name: "www",
-  email: "www@mail.ru",
-  date: "2021-01-15 01:17:23"
-}];
-var courseData = [{
-  title: "Novation AFX Station Review with King Unique",
-  rate: 0.99,
-  detail: "We got our hands on the Novation AFX Station this week and of course King Unique was the obvious choice to dive into everything this Aphex Twin remixed monosynth has to offer!",
-  category: "HOW TO USE",
-  genre: "DEEP HOUSE",
-  tutor: ""
-}];
-
 
 /***/ }),
 
@@ -7759,7 +7681,7 @@ var render = function() {
                 [
                   _c("b-table", {
                     attrs: {
-                      items: _vm.tableData,
+                      items: _vm.getUsers,
                       fields: _vm.fields,
                       responsive: "sm",
                       "per-page": _vm.perPage,
@@ -7793,14 +7715,28 @@ var render = function() {
                               "router-link",
                               {
                                 staticClass: "btn btn-sm btn-secondary mr-2",
-                                attrs: { to: "/admin/user/edit" }
+                                attrs: {
+                                  to: {
+                                    name: "UserEdit",
+                                    params: { userId: row.item.id }
+                                  }
+                                }
                               },
                               [_c("i", { staticClass: "far fa-edit" })]
                             ),
                             _vm._v(" "),
-                            _c("b-button", { attrs: { size: "sm" } }, [
-                              _c("i", { staticClass: "fas fa-trash" })
-                            ])
+                            _c(
+                              "b-button",
+                              {
+                                attrs: { size: "sm" },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.deleteUser(row.item.id)
+                                  }
+                                }
+                              },
+                              [_c("i", { staticClass: "fas fa-trash" })]
+                            )
                           ]
                         }
                       }

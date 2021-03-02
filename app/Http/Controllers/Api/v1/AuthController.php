@@ -119,6 +119,7 @@ class AuthController extends Controller
      * @return App\Models\User
      */
     public function auth() {
-        return response()->json(auth()->user());
+        // return response()->json('date');
+        // return response()->json(auth()->user());
     }
 }

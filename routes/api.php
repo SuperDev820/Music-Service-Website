@@ -29,7 +29,7 @@ Route::group([ 'prefix' => 'v1', 'middleware' => 'api'], function(){
     Route::get('user/refresh', 'App\Http\Controllers\Api\v1\AuthController@token');
 
     /* User logout from system */
-    Route::post('user/logoute', 'App\Http\Controllers\Api\v1\AuthController@logout');
+    Route::get('user/logout', 'App\Http\Controllers\Api\v1\AuthController@logout');
 
     // Get auth user
     Route::get('token/validate', 'App\Http\Controllers\Api\v1\AuthController@auth');
@@ -47,30 +47,20 @@ Route::group([ 'prefix' => 'v1', 'middleware' => 'api'], function(){
         // /* Delete course by id */
         // Route::delete('{courseId}', 'App\Http\Controllers\Api\v1\CourseController@delete');
     });
-
-    Route::group([ 'prefix' => 'admin', 'middleware' => 'admin' ], function(){
-        /* Get all course details*/
-        Route::get('/users', 'App\Http\Controllers\Api\v1\UserController@getAll');
-        /* Get course detail by id */
-        Route::get('/user/{userId}', 'App\Http\Controllers\Api\v1\UserController@getById');
-        // /* Add a course */
-        // Route::post('/', 'App\Http\Controllers\Api\v1\CourseController@create');
-        // /* Update a course by id */
-        // Route::put('{courseId}', 'App\Http\Controllers\Api\v1\CourseController@update');
-        // /* Delete course by id */
-        // Route::delete('{courseId}', 'App\Http\Controllers\Api\v1\CourseController@delete');
-
-        /* Get all course details*/
-        Route::get('/courses', 'App\Http\Controllers\Api\v1\CourseController@getAll');
-        /* Get course detail by id */
-        Route::get('/course/{courseId}', 'App\Http\Controllers\Api\v1\CourseController@getById');
-        // /* Add a course */
-        // Route::post('/', 'App\Http\Controllers\Api\v1\CourseController@create');
-        // /* Update a course by id */
-        // Route::put('{courseId}', 'App\Http\Controllers\Api\v1\CourseController@update');
-        // /* Delete course by id */
-        // Route::delete('{courseId}', 'App\Http\Controllers\Api\v1\CourseController@delete');
+    //Admin actions
+    Route::group([ 'prefix' => 'admin' ], function(){
+        /* Get all users details*/
+        Route::get('users', 'App\Http\Controllers\Api\v1\UserController@getAll');
+        // /* Add a user */
+        Route::post('user/create', 'App\Http\Controllers\Api\v1\UserController@create');
+        // /* Update a user */
+        Route::post('user/update', 'App\Http\Controllers\Api\v1\UserController@update');
+        /* Get user detail by id */
+        Route::get('user/{userId}', 'App\Http\Controllers\Api\v1\UserController@getById');
+        /* delete user by id */
+        Route::get('user/delete/{userId}', 'App\Http\Controllers\Api\v1\UserController@delete');
     });
+
     Route::group(['middleware' => ['jwt.auth']], function() {
 
 

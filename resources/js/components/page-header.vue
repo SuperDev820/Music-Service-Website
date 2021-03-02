@@ -32,18 +32,6 @@ export default {
     </div>
     <div class="col-sm-6">
       <slot />
-      <!-- <div class="float-right d-none d-md-block">
-        <b-dropdown right variant="primary">
-          <template v-slot:button-content>
-            <i class="mdi mdi-settings mr-2"></i> Settings
-          </template>
-          <a class="dropdown-item" href="javascript: void(0);">Action</a>
-          <a class="dropdown-item" href="javascript: void(0);">Another action</a>
-          <a class="dropdown-item" href="javascript: void(0);">Something else here</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="javascript: void(0);">Separated link</a>
-        </b-dropdown>
-      </div> -->
     </div>
   </div>
   <!-- end page title -->

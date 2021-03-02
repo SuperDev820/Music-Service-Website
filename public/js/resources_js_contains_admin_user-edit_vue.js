@@ -245,11 +245,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
 /* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _subcomponent_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./subcomponent/layout */ "./resources/js/contains/admin/subcomponent/layout.vue");
-/* harmony import */ var _components_page_header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/components/page-header */ "./resources/js/components/page-header.vue");
-/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/app.config */ "./resources/js/app.config.json");
-/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./data */ "./resources/js/contains/admin/data.js");
+/* harmony import */ var E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var _subcomponent_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./subcomponent/layout */ "./resources/js/contains/admin/subcomponent/layout.vue");
+/* harmony import */ var _components_page_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/components/page-header */ "./resources/js/components/page-header.vue");
+/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/app.config */ "./resources/js/app.config.json");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.mjs");
 /* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+
 
 
 
@@ -263,12 +265,12 @@ __webpack_require__.r(__webpack_exports__);
     title: "EDIT USER",
     meta: [{
       name: "description",
-      content: _app_config__WEBPACK_IMPORTED_MODULE_5__.description
+      content: _app_config__WEBPACK_IMPORTED_MODULE_6__.description
     }]
   },
   components: {
-    Layout: _subcomponent_layout__WEBPACK_IMPORTED_MODULE_3__.default,
-    PageHeader: _components_page_header__WEBPACK_IMPORTED_MODULE_4__.default
+    Layout: _subcomponent_layout__WEBPACK_IMPORTED_MODULE_4__.default,
+    PageHeader: _components_page_header__WEBPACK_IMPORTED_MODULE_5__.default
   },
   data: function data() {
     return {
@@ -283,11 +285,13 @@ __webpack_require__.r(__webpack_exports__);
         text: "Edit",
         active: true
       }],
+      isError: false,
+      Error: null,
       typeform: {
-        name: _data__WEBPACK_IMPORTED_MODULE_6__.userData[0].name,
+        name: "",
+        email: "",
         password: "",
-        confirmPassword: "",
-        email: _data__WEBPACK_IMPORTED_MODULE_6__.userData[0].email
+        confirmPassword: ""
       },
       typesubmit: false
     };
@@ -297,12 +301,8 @@ __webpack_require__.r(__webpack_exports__);
       name: {
         required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required
       },
-      password: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required,
-        minLength: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.minLength)(6)
-      },
+      password: {},
       confirmPassword: {
-        required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.required,
         sameAsPassword: (0,vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_7__.sameAs)("password")
       },
       email: {
@@ -311,93 +311,48 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
   },
-  methods: {
+  mounted: function mounted() {
+    this.getUserById(this.$route.params.userId);
+  },
+  computed: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_3__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_8__.mapGetters)(['getUser'])),
+  methods: (0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_3__.default)((0,E_Laravel_Lukasz_tutorial_node_modules_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_3__.default)({}, (0,vuex__WEBPACK_IMPORTED_MODULE_8__.mapActions)(['getUserById', 'updateUser'])), {}, {
     /**
      * Validation type submit
      */
     // eslint-disable-next-line no-unused-vars
     typeForm: function typeForm(e) {
-      this.typesubmit = true; // stop here if form is invalid
+      var _this = this;
+
+      this.typesubmit = true;
+      this.isError = false;
+      this.Error = null; // stop here if form is invalid
 
       this.$v.$touch();
-    }
-  }
-});
 
-/***/ }),
-
-/***/ "./resources/js/contains/admin/data.js":
-/*!*********************************************!*\
-  !*** ./resources/js/contains/admin/data.js ***!
-  \*********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "sparklineChartData": function() { return /* binding */ sparklineChartData; },
-/* harmony export */   "salesDonutChart": function() { return /* binding */ salesDonutChart; },
-/* harmony export */   "radialBarChart": function() { return /* binding */ radialBarChart; },
-/* harmony export */   "userData": function() { return /* binding */ userData; },
-/* harmony export */   "courseData": function() { return /* binding */ courseData; }
-/* harmony export */ });
-var sparklineChartData = {
-  sparkChart1: [6, 2, 8, 4, 3, 8, 1, 3, 6, 5, 9, 2, 8, 1, 4, 8, 9, 8, 2, 1],
-  sparkChart2: [6, 2, 8, 4, -3, 8, 1, -3, 6, -5, 9, 2, -8, 1, 4, 8, 9, 8, 2, 1],
-  sparkChart3: [6, 2, 8, 4, 3, 8, 1, 3, 6, 5, 9, 2, 8, 1, 4, 8, 9, 8, 2, 1],
-  reflineStyle: {
-    strokeOpacity: 1,
-    strokeDasharray: "3, 3"
-  },
-  style: {
-    stroke: "#02a499",
-    fill: "#02a499"
-  }
-};
-var salesDonutChart = {
-  data: {
-    series: [54, 28, 17],
-    labels: [1, 2, 3]
-  },
-  options: {
-    donut: true,
-    showLabel: false
-  }
-};
-var radialBarChart = {
-  chartOptions: {
-    plotOptions: {
-      radialBar: {
-        hollow: {
-          size: "45%"
-        },
-        dataLabels: {
-          value: {
-            show: false
-          },
-          name: {
-            show: false
-          }
-        }
+      if (this.$v.typeform.name.$error || this.$v.typeform.email.$error || this.$v.typeform.confirmPassword.$error) {
+        return;
       }
-    },
-    colors: ["#02a499"]
-  }
-};
-var userData = [{
-  name: "www",
-  email: "www@mail.ru",
-  date: "2021-01-15 01:17:23"
-}];
-var courseData = [{
-  title: "Novation AFX Station Review with King Unique",
-  rate: 0.99,
-  detail: "We got our hands on the Novation AFX Station this week and of course King Unique was the obvious choice to dive into everything this Aphex Twin remixed monosynth has to offer!",
-  category: "HOW TO USE",
-  genre: "DEEP HOUSE",
-  tutor: ""
-}];
 
+      return this.updateUser({
+        id: this.getUser.id,
+        name: this.typeform.name,
+        email: this.typeform.email,
+        password: this.typeform.password,
+        password_confirmation: this.typeform.confirmPassword
+      }).then(function (res) {
+        _this.$router.push({
+          name: "Users"
+        });
+
+        _this.typesubmit = false;
+      })["catch"](function (error) {
+        _this.typesubmit = false;
+        _this.Error = error ? error : "";
+        _this.isError = true;
+      });
+    }
+  })
+});
 
 /***/ }),
 
@@ -7657,248 +7612,290 @@ var render = function() {
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-12" }, [
           _c("div", { staticClass: "card" }, [
-            _c("div", { staticClass: "card-body" }, [
-              _c(
-                "form",
-                {
-                  attrs: { action: "#" },
-                  on: {
-                    submit: function($event) {
-                      $event.preventDefault()
-                      return _vm.typeForm($event)
+            _c(
+              "div",
+              { staticClass: "card-body" },
+              [
+                _c(
+                  "b-alert",
+                  {
+                    staticClass: "mt-3",
+                    attrs: { variant: "danger", dismissible: "" },
+                    model: {
+                      value: _vm.isError,
+                      callback: function($$v) {
+                        _vm.isError = $$v
+                      },
+                      expression: "isError"
                     }
-                  }
-                },
-                [
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("Name")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.typeform.name,
-                          expression: "typeform.name"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      class: {
-                        "is-invalid":
-                          _vm.typesubmit && _vm.$v.typeform.name.$error
-                      },
-                      attrs: {
-                        type: "text",
-                        placeholder: "Name",
-                        name: "name"
-                      },
-                      domProps: { value: _vm.typeform.name },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.typeform, "name", $event.target.value)
-                        }
+                  },
+                  [_vm._v(_vm._s(_vm.Error))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "form",
+                  {
+                    attrs: { action: "#" },
+                    on: {
+                      submit: function($event) {
+                        $event.preventDefault()
+                        return _vm.typeForm($event)
                       }
-                    }),
-                    _vm._v(" "),
-                    _vm.typesubmit && _vm.$v.typeform.name.$error
-                      ? _c("div", { staticClass: "invalid-feedback" }, [
-                          !_vm.$v.typeform.name.required
-                            ? _c("span", [_vm._v("This value is required.")])
-                            : _vm._e()
-                        ])
-                      : _vm._e()
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("E-Mail")]),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.typeform.email,
-                            expression: "typeform.email"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid":
-                            _vm.typesubmit && _vm.$v.typeform.email.$error
-                        },
-                        attrs: {
-                          type: "email",
-                          name: "email",
-                          placeholder: "Enter a valid email"
-                        },
-                        domProps: { value: _vm.typeform.email },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.typeform, "email", $event.target.value)
-                          }
-                        }
-                      }),
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Name")]),
                       _vm._v(" "),
-                      _vm.typesubmit && _vm.$v.typeform.email.$error
-                        ? _c("div", { staticClass: "invalid-feedback" }, [
-                            !_vm.$v.typeform.email.required
-                              ? _c("span", [_vm._v("This value is required.")])
-                              : _vm._e(),
-                            _vm._v(" "),
-                            !_vm.$v.typeform.email.email
-                              ? _c("span", [
-                                  _vm._v("This value should be a valid email.")
-                                ])
-                              : _vm._e()
-                          ])
-                        : _vm._e()
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("Password")]),
-                    _vm._v(" "),
-                    _c("div", [
                       _c("input", {
                         directives: [
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.typeform.password,
-                            expression: "typeform.password"
+                            value: (_vm.typeform.name = _vm.getUser.name),
+                            expression: "typeform.name=getUser.name"
                           }
                         ],
                         staticClass: "form-control",
                         class: {
                           "is-invalid":
-                            _vm.typesubmit && _vm.$v.typeform.password.$error
+                            _vm.typesubmit && _vm.$v.typeform.name.$error
                         },
                         attrs: {
-                          type: "password",
-                          name: "password",
-                          placeholder: "Password"
+                          type: "text",
+                          placeholder: "Name",
+                          name: "name"
                         },
-                        domProps: { value: _vm.typeform.password },
+                        domProps: {
+                          value: (_vm.typeform.name = _vm.getUser.name)
+                        },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
                               return
                             }
                             _vm.$set(
-                              _vm.typeform,
-                              "password",
+                              (_vm.typeform.name = _vm.getUser),
+                              "name",
                               $event.target.value
                             )
                           }
                         }
                       }),
                       _vm._v(" "),
-                      _vm.typesubmit && _vm.$v.typeform.password.$error
+                      _vm.typesubmit && _vm.$v.typeform.name.$error
                         ? _c("div", { staticClass: "invalid-feedback" }, [
-                            !_vm.$v.typeform.password.required
+                            !_vm.$v.typeform.name.required
                               ? _c("span", [_vm._v("This value is required.")])
-                              : _vm._e(),
-                            _vm._v(" "),
-                            !_vm.$v.typeform.password.minLength
-                              ? _c("span", [
-                                  _vm._v(
-                                    "Password must be at least 6 characters."
-                                  )
-                                ])
                               : _vm._e()
                           ])
                         : _vm._e()
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("Confirm Password")]),
+                    ]),
                     _vm._v(" "),
-                    _c("div", [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.typeform.confirmPassword,
-                            expression: "typeform.confirmPassword"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        class: {
-                          "is-invalid":
-                            _vm.typesubmit &&
-                            _vm.$v.typeform.confirmPassword.$error
-                        },
-                        attrs: {
-                          type: "password",
-                          name: "confirmPassword",
-                          placeholder: "Confirm Password"
-                        },
-                        domProps: { value: _vm.typeform.confirmPassword },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.typeform,
-                              "confirmPassword",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      }),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("E-Mail")]),
                       _vm._v(" "),
-                      _vm.typesubmit && _vm.$v.typeform.confirmPassword.$error
-                        ? _c("div", { staticClass: "invalid-feedback" }, [
-                            !_vm.$v.typeform.confirmPassword.required
-                              ? _c("span", [_vm._v("This value is required.")])
-                              : !_vm.$v.typeform.confirmPassword.sameAsPassword
-                              ? _c("span", [
-                                  _vm._v("This value should be the same.")
-                                ])
-                              : _vm._e()
-                          ])
-                        : _vm._e()
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group mt-5 mb-0" }, [
-                    _c(
-                      "div",
-                      [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-primary",
-                            attrs: { type: "submit" }
+                      _c("div", [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: (_vm.typeform.email = _vm.getUser.email),
+                              expression: "typeform.email=getUser.email"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid":
+                              _vm.typesubmit && _vm.$v.typeform.email.$error
                           },
-                          [_vm._v("Save")]
-                        ),
+                          attrs: {
+                            type: "email",
+                            name: "email",
+                            placeholder: "Enter a valid email"
+                          },
+                          domProps: {
+                            value: (_vm.typeform.email = _vm.getUser.email)
+                          },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                (_vm.typeform.email = _vm.getUser),
+                                "email",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
                         _vm._v(" "),
-                        _c(
-                          "router-link",
-                          {
-                            staticClass: "btn btn-secondary m-l-5 ml-1",
-                            attrs: { to: "/admin/users" }
+                        _vm.typesubmit && _vm.$v.typeform.email.$error
+                          ? _c("div", { staticClass: "invalid-feedback" }, [
+                              !_vm.$v.typeform.email.required
+                                ? _c("span", [
+                                    _vm._v("This value is required.")
+                                  ])
+                                : _vm._e(),
+                              _vm._v(" "),
+                              !_vm.$v.typeform.email.email
+                                ? _c("span", [
+                                    _vm._v(
+                                      "This value should be a valid email."
+                                    )
+                                  ])
+                                : _vm._e()
+                            ])
+                          : _vm._e()
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Password")]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.typeform.password,
+                              expression: "typeform.password"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid":
+                              _vm.typesubmit && _vm.$v.typeform.password.$error
                           },
-                          [_vm._v("Cancel")]
-                        )
-                      ],
-                      1
-                    )
-                  ])
-                ]
-              )
-            ])
+                          attrs: {
+                            type: "password",
+                            name: "password",
+                            placeholder: "Password"
+                          },
+                          domProps: { value: _vm.typeform.password },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.typeform,
+                                "password",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _vm.typesubmit && _vm.$v.typeform.password.$error
+                          ? _c("div", { staticClass: "invalid-feedback" }, [
+                              !_vm.$v.typeform.password.required
+                                ? _c("span", [
+                                    _vm._v("This value is required.")
+                                  ])
+                                : _vm._e(),
+                              _vm._v(" "),
+                              !_vm.$v.typeform.password.minLength
+                                ? _c("span", [
+                                    _vm._v(
+                                      "Password must be at least 6 characters."
+                                    )
+                                  ])
+                                : _vm._e()
+                            ])
+                          : _vm._e()
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", [_vm._v("Confirm Password")]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.typeform.confirmPassword,
+                              expression: "typeform.confirmPassword"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            "is-invalid":
+                              _vm.typesubmit &&
+                              _vm.$v.typeform.confirmPassword.$error
+                          },
+                          attrs: {
+                            type: "password",
+                            name: "confirmPassword",
+                            placeholder: "Confirm Password"
+                          },
+                          domProps: { value: _vm.typeform.confirmPassword },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.typeform,
+                                "confirmPassword",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _vm.typesubmit && _vm.$v.typeform.confirmPassword.$error
+                          ? _c("div", { staticClass: "invalid-feedback" }, [
+                              !_vm.$v.typeform.confirmPassword.required
+                                ? _c("span", [
+                                    _vm._v("This value is required.")
+                                  ])
+                                : !_vm.$v.typeform.confirmPassword
+                                    .sameAsPassword
+                                ? _c("span", [
+                                    _vm._v("This value should be the same.")
+                                  ])
+                                : _vm._e()
+                            ])
+                          : _vm._e()
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group mt-5 mb-0" }, [
+                      _c(
+                        "div",
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-primary",
+                              attrs: { type: "submit" }
+                            },
+                            [_vm._v("Save")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "btn btn-secondary m-l-5 ml-1",
+                              attrs: { to: "/admin/users" }
+                            },
+                            [_vm._v("Cancel")]
+                          )
+                        ],
+                        1
+                      )
+                    ])
+                  ]
+                )
+              ],
+              1
+            )
           ])
         ])
       ])

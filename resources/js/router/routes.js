@@ -3,9 +3,11 @@ import store from '../store'
 export default [
     {
         path: '/',
-        // meta: { authRequired: true },
+        meta: {
+            // authRequired: true,
+        },
         name: 'home',
-        component: () => import('../contains/home/home'),
+        component: () => import('../contains/dashboard/home'),
     },
     {
         path: '/login',
@@ -16,7 +18,7 @@ export default [
                 // If the user is already logged in
                 if (store.getters['isAuthenticated']) {
                     // Redirect to the home page instead
-                    next({ name: 'TutorialDashboard' })
+                    next({ name: 'home' })
                 } else {
                     // Continue to the login page
                     next()
@@ -33,7 +35,7 @@ export default [
                 // If the user is already logged in
                 if (store.getters['isAuthenticated']) {
                     // Redirect to the home page instead
-                    next({ name: 'TutorialDashboard' })
+                    next({ name: 'home' })
                 } else {
                     // Continue to the login page
                     next()
@@ -50,7 +52,7 @@ export default [
                 // If the user is already logged in
                 if (store.getters['isAuthenticated']) {
                     // Redirect to the home page instead
-                    next({ name: 'TutorialDashboard' })
+                    next({ name: 'home' })
                 } else {
                     // Continue to the login page
                     next()
@@ -73,12 +75,12 @@ export default [
             },
         },
     },
-    {
+    {     
         path: '/tutorials',
         name: 'TutorialDashboard',
         component: () => import('../contains/tutorials/dashboard'),
         meta: {
-            authRequired: true,
+            // authRequired: true,
         },
     },
     {
@@ -86,7 +88,7 @@ export default [
         name: 'TutorialAllCourses',
         component: () => import('../contains/tutorials/allcourses'),
         meta: {
-            authRequired: true,
+            // authRequired: true,
         },
     },
     {
@@ -94,64 +96,65 @@ export default [
         name: 'TutorialCourse',
         component: () => import('../contains/tutorials/course'),
         meta: {
-            authRequired: true,
+            // authRequired: true,
         },
     },
+
     {
         path: '/admin',
         name: 'Admin',
         component: () => import('../contains/admin/dashboard'),
-        // meta: {
-        //     authRequired: true,
-        // },
+        meta: {
+            authRequired: true,
+        },
     },
     {
         path: '/admin/users',
         name: 'Users',
         component: () => import('../contains/admin/users'),
-        // meta: {
-        //     authRequired: true,
-        // },
+        meta: {
+            authRequired: true,
+        },
     },
     {
         path: '/admin/user/create',
         name: 'UserCreate',
         component: () => import('../contains/admin/user-create'),
-        // meta: {
-        //     authRequired: true,
-        // },
+        meta: {
+            authRequired: true,
+        },
     },
     {
-        path: '/admin/user/edit',
+        path: '/admin/user/edit/:userId',
         name: 'UserEdit',
         component: () => import('../contains/admin/user-edit'),
-        // meta: {
-        //     authRequired: true,
-        // },
+        meta: {
+            authRequired: true,
+        },
     },
 
     {
         path: '/admin/courses',
         name: 'Courses',
         component: () => import('../contains/admin/courses'),
-        // meta: {
-        //     authRequired: true,
-        // },
+        meta: {
+            authRequired: true,
+        },
     },
     {
         path: '/admin/course/create',
         name: 'CourseCreate',
         component: () => import('../contains/admin/course-create'),
-        // meta: {
-        //     authRequired: true,
-        // },
+        meta: {
+            authRequired: true,
+        },
     },
     {
         path: '/admin/course/edit',
         name: 'CourseEdit',
         component: () => import('../contains/admin/course-edit'),
-        // meta: {
-        //     authRequired: true,
-        // },
+        meta: {
+            authRequired: true,
+        },
     },
 ]
